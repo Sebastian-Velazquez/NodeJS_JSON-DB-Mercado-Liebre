@@ -1,0 +1,24 @@
+/* -------------footer------------------------------------------------------------ */
+.Pie-footer__{
+    text-align: center;
+    margin: 10px;
+} 
+/* -------------footer------------------------------------------------------------ */
+.Pie-footer__Copyright{
+    margin: 10px;
+    padding-top: 20px;
+    
+}
+    /* estilo al icon */
+.estilo-pie{ 
+    font-size: 2em;
+    padding: 10px;
+    color: #1259c3;
+}
+@media screen and (min-width:700px){
+.content-footer{
+    display: flex;
+}
+}
+/* -------------------------animaciones-------------------------------- */
+/* -------------------------animaciones-------------------------------- */

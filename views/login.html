@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/estiloHeader.css" rel="stylesheet"> 
+        <link href="css/estiloLogin.css" rel="stylesheet"> 
+        <link href="css/estiloFooter.css" rel="stylesheet"> 
+        <!--     Pagina de icons -->
+        <script src="https://kit.fontawesome.com/aef00d3210.js" crossorigin="anonymous"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+        <title>Proyecto en Playground</title>
+    </head>
+    <body>   
+            <header class="header">
+                    <div class="content__logo-img">
+                        <img src="/img/logo-mercado-liebre.svg" alt="logo" class="img-band">
+                    </div>
+                    <div class="heder-content__lupa-button">
+                        <!--  Icono boton https://fontawesome.com/-->
+                        <button class="heder-content__button" ><i class="fa-sharp fa-solid fa-magnifying-glass lupa"></i> </button>
+                        <input type="text"  placeholder="Buscar productos, marcas" class="heder-content__input" >  
+                    </div>
+                    <div class="content-formaDePago">
+                        <p ><i class="fa-solid fa-hand-holding-dollar"></i><b>Comprá en cuotas y sin tarjeta de crédito</b></p>
+                    </div>
+                    <!-- lista de menu    -->   
+                    <nav class="nav-lista-menu">  
+                        <lu class="nav-lista-menu__lista">
+                            <li class="nav-lista-menu__lista-nombre"><a href="#"> Ofertas</a></li>
+                            <li class="nav-lista-menu__lista-nombre"><a href="#">Tiendas Oficiales</a></li>
+                            <li class="nav-lista-menu__lista-nombre"><a href="#">Vender</a></li>
+                            <li class="nav-lista-menu__lista-nombre"><a href="#">Ayuda</a></li>
+                        </lu>
+                        <lu class="nav-lista-menu__lista">                        <!--  Icono cuenta https://fontawesome.com/-->
+                            <li class="nav-lista-menu__lista-nombre"><a href="/registro">Creá tu cuenta</a> <i class="fa-regular fa-id-card"></i></li>
+                                                <!--  Icono ingresar https://fontawesome.com/-->
+                            <li class="nav-lista-menu__lista-nombre"><a href="#">Ingresá</a><i class="fa-solid fa-right-to-bracket"></i></li>
+                                            <!--  Icono compra https://fontawesome.com/-->
+                            <li class="nav-lista-menu__lista-nombre"><a href="#">Mis compras</a><i class="fa-solid fa-basket-shopping"></i></li>
+                        </lu>
+                    </nav>  
+                
+                <!--  Lista desplegable -->
+                <div class="content-lista-hambur">
+                    <div class="content-lista-hambur__fondo">
+                    <i class="fas fa-bars menu-habur"></i>
+                    </div>
+                </div>
+                <div class="content-baner">
+                    <img src="/img/img-home-banner.jpg" class="content-baner__img">
+                </div>
+            </header>
+            <main>
+                <form action="#" method="#" class="content-form">
+                    <input type="text" placeholder="Nombre de usuario" name="nombreYApellido" class="main-form__imput">
+                    <input type="text" placeholder="Contraseña" name="nombreDeUsuario" class="main-form__imput">  
+                    <div class="conten-botones">
+                        <input type="submit" name="registrarse" class="submit">
+                    </div>
+                </form>
+            </main>
+            <footer class="footer">
+                <div class="content-footer">
+                    <section class="Pie-footer__">
+                        <i class="fa-solid fa-credit-card estilo-pie"></i>
+                        <h4>Pagá con tarjeta o en efectivo</h4>
+                        <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+                    </section>
+                    <section class="Pie-footer__">
+                        <i class="fa-solid fa-gift estilo-pie"></i>
+                        <h4>Envío gratis desde $ 2.500</h4>
+                        <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+                    </section>
+                    <section class="Pie-footer__">
+                        <i class="fa-solid fa-user-shield estilo-pie"></i>
+                        <h4>Seguridad, de principio a fin </h4>
+                        <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+                    </section>
+                </div>
+                <section class="Pie-footer__Copyright">
+                    <h4>Copyright © 1999-2020 MercadoLiebre S.R.L.</h4>
+                </section>
+            </footer>
+    </body>
+</html>

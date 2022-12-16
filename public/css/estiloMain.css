@@ -1,0 +1,82 @@
+
+/* ----------------Main---------------------------- */
+.main{
+    display: flex;
+    background-color: #ebebeb;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    flex-wrap:wrap;
+}
+
+/* ----------------seccion---------------------------- */
+.section__caja{
+    margin: 15px;   
+    width: 90%;
+    text-align: center;
+}
+/* ----------------cajaDeLosArticulos---------------------------- */
+.articilo_article__caja{
+    width: 100%;
+    justify-content: center;
+}
+/* ----------------descipcionDelArticulo---------------------------- */
+.div-descripcion{
+    /* border: solid 1px #ebebeb; */
+    background-color: white;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+/* ----------------contenidoDeLaImagen---------------------------- */
+.div__img{
+    background-color: #ebebeb;
+}
+
+/* logo camion, descuentom, circulo del camion */
+.camion-icon, .articulo-article__descuento, .color-circulo {
+    color: green; 
+    padding-bottom: 5px;
+    text-align:center;
+}
+ /* ----------------tituloDeMain---------------------------- */
+.titulo-section__h4{
+    font-size: 24px;
+}
+ /* ----------------desceipcion de articulo---------------------------- */
+.articulo-artlite__descripcion{
+    margin-top: 15px;
+    text-align: center;
+}
+.fa-circle{
+    font-size: 30px;
+    position:relative;
+    right: 26px;
+    top: 5px;
+}
+.articulo-article__precio{
+    padding-top: 10px;
+    font-size: 25px;
+}
+@media screen and (min-width:700px){
+ /* ----------------tituloDeMain---------------------------- */
+.titulo-section__h4{
+    width: 100%;
+    margin-left: 70px;
+    padding-top: 15px;
+}
+/* ----------------cajaDeLosArticulos---------------------------- */
+.articilo_article__caja{
+    width: 250px;
+}
+/* ----------------seccion---------------------------- */
+.section__caja{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content:space-between;
+}
+}
+/* -------------------------animaciones-------------------------------- */
+/* -------------------------animaciones-------------------------------- */

@@ -1,0 +1,64 @@
+main{
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* ----------------contentDelForm---------------------------- */
+.content-form{
+    display: flex;
+    flex-direction:column;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+}
+/* ----------------inputDelForm---------------------------- */
+.main-form__imput{
+    height: 30px;
+    width: 20%px;
+    margin: 5px;
+    flex-direction: row;
+    justify-content: center;
+}
+/* ----------------H1---------------------------- */
+h1{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+/* ----------------H2---------------------------- */
+h2{
+    margin: 20px;
+    /* margin-bottom: 0px; */
+}
+/* ----------------divContentDelCheckbox---------------------------- */
+.content-checkbox{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: start;
+    padding-left: 20px;
+    margin:auto;
+}
+/* ----------------checkbox---------------------------- */
+.main-form__imput--checkbox{
+    position: absolute;
+    left: 0;
+    padding: 15px;
+}
+/* ----------------label del checkbox---------------------------- */
+.label-imput{
+    margin: 15px;
+}
+/* ----------------cajaDeForm---------------------------- */
+.conten-botones{
+    padding: 30px;
+}
+/* ----------------botonesDeRegistroYBorrar---------------------------- */
+.submit{
+    height: 50px;
+    width: 40%;
+    margin-right: 10px;
+    background-color: #1259c3;
+    border: none;
+    border-radius: 5%;
+}

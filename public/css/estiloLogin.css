@@ -1,0 +1,38 @@
+/* ----------------Main---------------------------- */
+main{
+    display: flex;
+    background-color: #ebebeb;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    flex-wrap:wrap;
+}
+/* ----------------contentDelForm---------------------------- */
+.content-form{
+    display: flex;
+    flex-direction:column;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+}
+/* ----------------inputDelForm---------------------------- */
+.main-form__imput{
+    height: 30px;
+    width: 20%px;
+    margin: 5px;
+    flex-direction: row;
+    justify-content: center;
+}
+/* ----------------label del checkbox---------------------------- */
+.label-imput{
+    margin: 15px;
+}
+/* ----------------Submit---------------------------- */
+.submit{
+    height: 50px;
+    width: 40%;
+    margin-right: 10px;
+    background-color: #1259c3;
+    border: none;
+    border-radius: 5%;
+}

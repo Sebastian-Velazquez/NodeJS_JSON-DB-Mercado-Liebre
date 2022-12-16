@@ -1,0 +1,145 @@
+/* -----------------Body--------------------------- */
+body{
+    background-color: #EAC926;
+    font-family: 'Roboto';
+}
+
+/* -----------------header--------------------------- */
+.header{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* ----------------logoMercadoLiebre---------------------------- */
+.content__logo-img{
+    height: 37px;
+    width: 45%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.img-band{
+    height: 100%;
+    width: 100%;
+    object-fit:contain;
+    object-position: center;
+}
+/* ----------------BarraDeBusqueda---------------------------- */
+.heder-content__lupa-button{
+    position: relative;
+    height: 37px; 
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-items:center;
+}
+.heder-content__input{
+    width: 100%;
+    padding: 5px; 
+    margin-top: 5px;
+
+}
+/* ----------------lupaDeBusqueda---------------------------- */
+.heder-content__button{
+    position:absolute;
+    right: 0;
+    padding: 5px;
+    margin-top: 5px;
+}
+.lupa{
+    font-size: 100%;
+}
+/* ----------------lineaDeFormaDePago---------------------------- */
+.content-formaDePago{
+    text-align: center;
+    width: 90%;
+    font-size: 12px;
+}
+
+/* ------------------listaDesplegable-------------------------- */
+.nav-lista-menu{
+    display: none;
+}
+/* -----------------listaHamburguesa--------------------------- */
+.content-lista-hambur{
+    width: 100%;
+    text-align: center;
+}
+
+.content-lista-hambur__fondo{
+    background-color: #1259c3;
+    display: inline-flex;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px; 
+
+}
+.menu-habur{
+    color: #ebebeb;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: -5px;
+}
+/* ----------------bandaDeHeader---------------------------- */
+.content-baner{
+    width: 100%;
+} 
+.content-baner__img{
+    height: 100%;
+    width: 100%;
+}
+/* ----------------paddingALasCajas---------------------------- */
+.content__logo-img, .content-formaDePago, .content-lista-hambur,.heder-content__lupa-button{
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width:391px){
+.header{
+    display: flex;
+    flex-direction: column;
+}
+/* ----------------BarraDeBusqueda---------------------------- */
+.heder-content__lupa-button{
+    width: 30VH;
+}
+}
+
+@media screen and (min-width:700px){ 
+.header{
+justify-content: space-between;
+}
+/* -----------------contentImgLogo--------------------------- */
+
+/* -----------------listaHamburguesa--------------------------- */
+.content-lista-hambur{
+    display: none;
+    }
+/* ----------------lineaDeFormaDePago---------------------------- */
+.content-formaDePago{
+    padding-top: 5px;
+    padding-right: 5px;
+    width: 30%;
+    justify-items:flex-end;
+}
+/* ----------------logoMercadoLiebre---------------------------- */
+.content__logo-img{
+    width: 20%;
+}
+/* ------------------cajaListaDesplegable-------------------------- */
+.nav-lista-menu{
+    display: flex;
+    justify-content:space-between;
+    list-style: none;
+    width: 100%;
+}
+/* ------------------listaDesplegable-------------------------- */
+.nav-lista-menu__lista{
+    display:inline-flex;
+}
+.nav-lista-menu__lista-nombre{
+    padding: 10px;
+}
+}
+/* -------------------------animaciones-------------------------------- */
+/* -------------------------animaciones-------------------------------- */
+
