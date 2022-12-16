@@ -6,7 +6,7 @@ const path = require('path');// para accder a las paginas
 app.use(express.static('public'));// nose para que es
 
 const port = process.env.PORT || 3000;
-app.listen(port,()=> console.log('Servidor corriendo en http://localhost:3030'));
+app.listen(port,()=> console.log('Servidor corriendo en http://localhost:3000'));
 
 //Creación de rutas
 

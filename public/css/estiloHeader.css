@@ -8,7 +8,9 @@ body{
 .header{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
+
 /* ----------------logoMercadoLiebre---------------------------- */
 .content__logo-img{
     height: 37px;

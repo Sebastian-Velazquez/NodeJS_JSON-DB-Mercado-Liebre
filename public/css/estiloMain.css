@@ -25,9 +25,10 @@
     /* border: solid 1px #ebebeb; */
     background-color: white;
     margin-bottom: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+   /*  padding-top: 15px; */
+    /* padding-bottom: 15px; */
     text-align: center;
+    position: relative;
 }
 /* ----------------contenidoDeLaImagen---------------------------- */
 .div__img{
@@ -38,8 +39,24 @@
 .camion-icon, .articulo-article__descuento, .color-circulo {
     color: green; 
     padding-bottom: 5px;
-    text-align:center;
+   /*  text-align:center; */
 }
+.content__camion-circulo{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 80px;
+    top: -15px;
+    transition: ease-out transform .5s, ease-out right .5s;
+}
+
  /* ----------------tituloDeMain---------------------------- */
 .titulo-section__h4{
     font-size: 24px;

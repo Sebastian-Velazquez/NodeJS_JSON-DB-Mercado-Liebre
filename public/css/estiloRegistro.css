@@ -31,20 +31,19 @@ h2{
     /* margin-bottom: 0px; */
 }
 /* ----------------divContentDelCheckbox---------------------------- */
-.content-checkbox{
+.content-checkbox {
     display: flex;
     flex-direction: column;
-    position: relative;
     text-align: start;
     padding-left: 20px;
-    margin:auto;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
 }
 /* ----------------checkbox---------------------------- */
 .main-form__imput--checkbox{
-    position: absolute;
-    left: 0;
-    padding: 15px;
-}
+    margin-right: 15px;
+} 
 /* ----------------label del checkbox---------------------------- */
 .label-imput{
     margin: 15px;
