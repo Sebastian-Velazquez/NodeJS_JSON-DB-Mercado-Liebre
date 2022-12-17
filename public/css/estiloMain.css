@@ -20,6 +20,7 @@
     width: 100%;
     justify-content: center;
     position: relative;
+    padding-bottom: 15px ;
 }
 /* ----------------descipcionDelArticulo---------------------------- */
 .div-descripcion{
@@ -30,6 +31,8 @@
     /* padding-bottom: 15px; */
     text-align: center;
     position: relative;
+    height: 140px;
+    padding-top: 25px;
 }
 /* ----------------contenidoDeLaImagen---------------------------- */
 .div__img{
@@ -52,7 +55,17 @@
     font-size: 100%;
     position: absolute;
     left: 40%;
-    bottom: 80%;
+    bottom: 90%;
+    transition:  transform 1s;
+
+}
+.articilo_article__caja:hover .content__camion-circulo{
+transform: translate(50px) rotate(360deg);
+}
+.articilo_article__caja:hover{
+    -webkit-box-shadow: 1px 3px 8px 12px rgba(122,122,122,1);
+-moz-box-shadow: 1px 3px 8px 12px rgba(122,122,122,1);
+box-shadow: 1px 3px 8px 12px rgba(122,122,122,1);
 }
 
  /* ----------------tituloDeMain---------------------------- */
