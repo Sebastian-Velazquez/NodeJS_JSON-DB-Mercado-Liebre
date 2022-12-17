@@ -15,6 +15,9 @@
     padding: 10px;
     color: #1259c3;
 }
+.estilo-pie:hover{
+    color: #3F472B;
+}
 @media screen and (min-width:700px){
 .content-footer{
     display: flex;
