@@ -18,14 +18,14 @@
 /* ----------------cajaDeLosArticulos---------------------------- */
 .articilo_article__caja{
     width: 100%;
-    justify-content: center;
+    /* justify-content: center; */
     position: relative;
-    padding-bottom: 15px ;
+    /* padding-bottom: 15px ; */
 }
 /* ----------------descipcionDelArticulo---------------------------- */
 .div-descripcion{
     background-color: white;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     text-align: center;
     position: relative;
     height: 140px;
