@@ -15,47 +15,9 @@
         <title>Proyecto en Playground</title>
     </head>
     <body>   
-        <header class="header">
-                    <div class="content__logo-img">
-                        <a href="/"><img src="/img/logo-mercado-liebre.svg" alt="logo" class="img-band"></a>
-                    </div>
-                    <div class="heder-content__lupa-button">
-                        <!--  Icono boton https://fontawesome.com/-->
-                        <button class="heder-content__button" ><i class="fa-sharp fa-solid fa-magnifying-glass lupa"></i> </button>
-                        <input type="text"  placeholder="Buscar productos, marcas" class="heder-content__input" >  
-                    </div>
-                    <div class="content-formaDePago">
-                        <p ><i class="fa-solid fa-hand-holding-dollar"></i><b>Comprá en cuotas y sin tarjeta de crédito</b></p>
-                    </div>
-                    <!-- lista de menu    -->   
-                    <nav class="nav-lista-menu">  
-                        <lu class="nav-lista-menu__lista">
-                            <li class="nav-lista-menu__lista-nombre"><a href="#"> Ofertas</a></li>
-                            <li class="nav-lista-menu__lista-nombre"><a href="#">Tiendas Oficiales</a></li>
-                            <li class="nav-lista-menu__lista-nombre"><a href="#">Vender</a></li>
-                            <li class="nav-lista-menu__lista-nombre"><a href="#">Ayuda</a></li>
-                        </lu>
-                        <lu class="nav-lista-menu__lista">                        <!--  Icono cuenta https://fontawesome.com/-->
-                            <li class="nav-lista-menu__lista-nombre"><a href="/registro">Creá tu cuenta</a> <i class="fa-regular fa-id-card"></i></li>
-                                                <!--  Icono ingresar https://fontawesome.com/-->
-                            <li class="nav-lista-menu__lista-nombre"><a href="login">Ingresá</a><i class="fa-solid fa-right-to-bracket"></i></li>
-                                            <!--  Icono compra https://fontawesome.com/-->
-                            <li class="nav-lista-menu__lista-nombre"><a href="#">Mis compras</a><i class="fa-solid fa-basket-shopping"></i></li>
-                        </lu>
-                    </nav>  
-                
-                <!--  Lista desplegable -->
-                <div class="content-lista-hambur">
-                    <div class="content-lista-hambur__fondo">
-                    <i class="fas fa-bars menu-habur"></i>
-                    </div>
-                </div>
-
-        </header>
+        <%- include('parcials/header.ejs') %>
         <main class="main">
-            <div class="content-baner">
-                <img src="/img/img-home-banner.jpg" class="content-baner__img">
-            </div>
+            <%- include('parcials/banner.ejs') %>
                 <h4 class="titulo-section__h4">Basado en tu última visita</h4>
                 <section class="section__caja" >
                     <!-- Cafetera -->
@@ -177,27 +139,6 @@
                 </section>
                 
         </main>
-        <footer class="footer">
-                <div class="content-footer">
-                    <section class="Pie-footer__">
-                        <i class="fa-solid fa-credit-card estilo-pie"></i>
-                        <h4>Pagá con tarjeta o en efectivo</h4>
-                        <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
-                    </section>
-                    <section class="Pie-footer__">
-                        <i class="fa-solid fa-gift estilo-pie"></i>
-                        <h4>Envío gratis desde $ 2.500</h4>
-                        <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
-                    </section>
-                    <section class="Pie-footer__">
-                        <i class="fa-solid fa-user-shield estilo-pie"></i>
-                        <h4>Seguridad, de principio a fin </h4>
-                        <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
-                    </section>
-                </div>
-                <section class="Pie-footer__Copyright">
-                    <h4>Copyright © 1999-2020 MercadoLiebre S.R.L.</h4>
-                </section>
-        </footer>
+        <%- include('parcials/footer.ejs') %>
     </body>
 </html>
