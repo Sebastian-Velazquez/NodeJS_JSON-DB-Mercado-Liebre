@@ -1,3 +1,6 @@
+@import url(normalize.css);
+@import url(header.css);
+@import url(footer.css);
 /* ----------------Main---------------------------- */
 main{
     display: flex;

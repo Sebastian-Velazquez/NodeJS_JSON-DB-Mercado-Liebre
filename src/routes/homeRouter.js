@@ -14,5 +14,6 @@ const homeController = require("../controllers/homeController.js")
 router.get("/", homeController.index);
 router.get("/register", homeController.register);
 router.get("/login", homeController.loguearse);
+router.get("/ofertas", homeController.oferta);
 
 module.exports = router;
