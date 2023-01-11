@@ -6,6 +6,7 @@ const app = express();
 // Importamos routers//const path = require('path');// para accder a las paginas
 const homeRouter = require('./routes/homeRouter.js')
 const userRouter = require('./routes/userRouter.js')
+const productRouter = require('./routes/productRouter.js')
 
 //muestra infomacion adicional en la consela si se esta enviando informacion 
 app.use(morgan('dev'));
@@ -19,7 +20,7 @@ app.set('view engine', 'ejs');
 // Usando los enrutadores importados linea 5
 app.use("/", homeRouter);
 app.use("/user", userRouter);
-
+app.use("/product", productRouter);
 
 //Creación de rutas - resion anterior
 /* app.get('/', (req, res) => res.sendFile(path.join(__dirname, './views/home.html')));
