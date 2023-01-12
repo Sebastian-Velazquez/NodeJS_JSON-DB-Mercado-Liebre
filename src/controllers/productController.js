@@ -7,6 +7,7 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 /* const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
 
 const controlador ={ //IMPORTANTE
+    //-----------------------------OFERTA---------------------------------------
     oferta:(req, res)=>{
             let listaOferta = [
                 'lavadora',
@@ -16,6 +17,7 @@ const controlador ={ //IMPORTANTE
 
             res.render('ofertas',{'listaOferta':listaOferta})
     },
+    //-----------------------------DETAIL------------------------------------------
     detail:(req, res)=>{//devolver un detalle de producto- Se usa GET
         let id = req.params.id //esto es lo que nos llega por parametro
         
@@ -34,13 +36,23 @@ const controlador ={ //IMPORTANTE
             producto:productFiltrado,
             totalPrice:totalPrice});
     },
+
+    //-----------------------------CREATE------------------------------------------
     //nos manda a la pagina de vender.. Osea crear un producto para vender
     create:(req, res)=>{//va a una pagina
         res.render('product-create-form');
     },
+
+    //-----------------------------PROCESSCREATE------------------------------------
     //Llenamos la pagina para crear un producto para vender y lo guadamos en la BD
     processCreate:(req, res)=>{
         res.send(req.body);
+    },
+
+    //-----------------------------LIST------------------------------------
+    list:(req, res)=>{//muestra todos los productos de la lista
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('products',{'listaProductos':products})//es 'prodct' porque acordate que es el archivo .ejs el que.. antes coincidia.. se cambio para ser mas claros.
     }
 }
 
