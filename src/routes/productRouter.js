@@ -12,5 +12,7 @@ const productController = require("../controllers/productController.js")
 
 // procesa pedido de get. Ahora usamos router en MVC. son tutas 
 router.get("/ofertas", productController.oferta);
+//devolver o mandar un producto a detalle de producto
+router.get("/detail/:id", productController.detail);
 
 module.exports = router;

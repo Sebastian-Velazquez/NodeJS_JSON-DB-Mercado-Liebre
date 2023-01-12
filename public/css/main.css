@@ -62,9 +62,9 @@
 transform: translate(50px) rotate(360deg);
 
 }
-.articilo_article__caja:hover{
+/* .articilo_article__caja:hover{
     cursor: grab;
-}
+} */
 /* -------------------------sombraDelArticulo-------------------------------- */
 .articilo_article__caja:hover{
     -webkit-box-shadow: 1px 3px 8px 12px rgba(122,122,122,1);
