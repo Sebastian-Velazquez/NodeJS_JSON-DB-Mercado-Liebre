@@ -24,12 +24,19 @@ const controlador ={ //IMPORTANTE
         let productFiltrado = products.find(producto=>{
             return producto.id == id;
         })
+
         let totalPrice = productFiltrado.price - ((productFiltrado.price * productFiltrado.discount)/100);
-        console.log(totalPrice)
+        console.log(totalPrice);
 
         res.render('detail',{
             producto:productFiltrado,
-            totalPrice:totalPrice})
+            totalPrice:totalPrice});
+    },
+    create:(req, res)=>{//va a una pagina
+        res.render('product-create-form');
+    },
+    processCreate:(req, res)=>{
+        res.send(req.body);
     }
 }
 

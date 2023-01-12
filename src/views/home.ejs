@@ -42,6 +42,7 @@
                     
                     <!-- Cafetera -->
                     <% productosEnOferta.forEach(producto => { %>
+                        <a href="/product/detail/<%= producto.id %>">
                         <article class="articilo_article__caja">
                             <div class="div__img">
                                 <img src="/img/products/<%= producto.image %>" alt="imagenCafetera" class="img">
