@@ -18,30 +18,6 @@
                 <section class="section__caja" >
                     <!-- Producto -->
                     <% productosVisitados.forEach(producto => { %>
-                            <a href="/product/detail/<%= producto.id %>">
-                        <article class="articilo_article__caja">
-                            
-                            <div class="div__img">
-                                <img src="/img/products/<%= producto.image %>" alt="imagenCafetera" class="img">
-                            </div>
-                            <div class="div-descripcion">
-                                <div class="content__camion-circulo">
-                                    <i class="fa-sharp fa-solid fa-truck camion-icon"></i>
-                                </div>
-                                <p class="articulo-article__precio" >$<%= producto.price %></p>
-                                <p class="articulo-article__descuento"><%= producto.discount %>%</p>
-                                <p class="articulo-artlite__descripcion"><b><%= producto.name %></b></p>
-                            </div>
-                            </a>
-                        </article>
-                    <% }) %> 
-                </section>
-                    <!-- Fin Producto -->
-                <h4 class="titulo-section__h4">Basado en tu última visita</h4>
-                <section class="section__caja">
-                    
-                    <!-- Cafetera -->
-                    <% productosEnOferta.forEach(producto => { %>
                         <a href="/product/detail/<%= producto.id %>">
                         <article class="articilo_article__caja">
                             <div class="div__img">
@@ -56,7 +32,29 @@
                                 <p class="articulo-artlite__descripcion"><b><%= producto.name %></b></p>
                             </div>
                         </article>
-                        <% }) %> 
+                        </a>
+                    <% }) %> 
+                </section>
+                <h4 class="titulo-section__h4">Basado en tu última visita</h4>
+                <section class="section__caja">
+                    <!-- Producto -->
+                    <% productosEnOferta.forEach(producto => { %>
+                        <a href="/product/detail/<%= producto.id %>">
+                            <article class="articilo_article__caja">
+                                <div class="div__img">
+                                    <img src="/img/products/<%= producto.image %>" alt="imagenCafetera" class="img">
+                                </div>
+                                <div class="div-descripcion">
+                                    <div class="content__camion-circulo">
+                                        <i class="fa-sharp fa-solid fa-truck camion-icon"></i>
+                                    </div>
+                                    <p class="articulo-article__precio" >$<%= producto.price %></p>
+                                    <p class="articulo-article__descuento"><%= producto.discount %>%</p>
+                                    <p class="articulo-artlite__descripcion"><b><%= producto.name %></b></p>
+                                </div>
+                            </article>
+                        </a>
+                    <% }) %> 
                 </section>
                 
         </main>

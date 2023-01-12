@@ -20,21 +20,25 @@ const controlador ={ //IMPORTANTE
         let id = req.params.id //esto es lo que nos llega por parametro
         
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        
+        //Retorna el producto con el id mandado del req.params.id
         let productFiltrado = products.find(producto=>{
             return producto.id == id;
         })
 
+        //cualculo del descuento de la pagina detalle de producto
         let totalPrice = productFiltrado.price - ((productFiltrado.price * productFiltrado.discount)/100);
-        console.log(totalPrice);
+        /* console.log(totalPrice); */
 
+        //Listo para mandar a .ejs
         res.render('detail',{
             producto:productFiltrado,
             totalPrice:totalPrice});
     },
+    //nos manda a la pagina de vender.. Osea crear un producto para vender
     create:(req, res)=>{//va a una pagina
         res.render('product-create-form');
     },
+    //Llenamos la pagina para crear un producto para vender y lo guadamos en la BD
     processCreate:(req, res)=>{
         res.send(req.body);
     }
