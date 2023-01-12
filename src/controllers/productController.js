@@ -18,14 +18,18 @@ const controlador ={ //IMPORTANTE
     },
     detail:(req, res)=>{//devolver un detalle de producto- Se usa GET
         let id = req.params.id //esto es lo que nos llega por parametro
+        
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        
         let productFiltrado = products.find(producto=>{
             return producto.id == id;
         })
-    
-    /* console.log(productFiltrado) */
+        let totalPrice = productFiltrado.price - ((productFiltrado.price * productFiltrado.discount)/100);
+        console.log(totalPrice)
 
-        res.render('detail',{producto:productFiltrado})
+        res.render('detail',{
+            producto:productFiltrado,
+            totalPrice:totalPrice})
     }
 }
 
