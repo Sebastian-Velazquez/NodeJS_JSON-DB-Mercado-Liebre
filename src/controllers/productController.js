@@ -101,11 +101,11 @@ const controlador ={ //
         //llamamos a todos lo datos
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-        let id = req.params.id
+        let id = req.params.id; 
         let productoIdBody = products.find(producto=>{
             return producto.id == id;
         })
-
+    
         let productoEditado ={
             id: productoIdBody.id, 
             name: req.body.name,
@@ -116,8 +116,8 @@ const controlador ={ //
             image: productoIdBody.image
         }
         // MOdificar el array en el Id que esta posicionado - 
-        let indice = products.findIndex(product =>{
-            return product.id = id;
+        let indice = products.findIndex(producto =>{
+            return producto.id == id;
         })
         console.log(indice);
         console.log(productoEditado);
