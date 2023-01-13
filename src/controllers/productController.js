@@ -53,6 +53,19 @@ const controlador ={ //
     list:(req, res)=>{//muestra todos los productos de la lista
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('products',{'listaProductos':products})//es 'prodct' porque acordate que es el archivo .ejs el que.. antes coincidia.. se cambio para ser mas claros.
+    },
+    //-----------------------------EDIT------------------------------------
+    edit:(req, res)=>{
+        let id = req.params.id //esto es lo que nos llega por parametro
+        
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        //Retorna el producto con el id mandado del req.params.id
+        let productFiltrado = products.find(producto=>{
+            return producto.id == id;
+        })
+
+        //Listo para mandar a .ejs//se pone el nombre del ejs entre ''.
+        res.render('product-edit-form',{producto:productFiltrado,});
     }
 }
 

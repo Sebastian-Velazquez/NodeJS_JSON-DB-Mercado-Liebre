@@ -23,4 +23,8 @@ router.post("/create/", productController.processCreate);//se encarga de procesa
 //manda toda la lista de productos Lista de producto sd asd
 router.get("/list", productController.list);
 
+//Editar prducto get y put
+router.get("/edit/:id/", productController.edit);
+/* router.get("/edit", userController.edit); */
+
 module.exports = router;

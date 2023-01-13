@@ -11,7 +11,10 @@ const userController = require("../controllers/userController.js")
 /* router.get("/list", mainController.list); */ //EJEMPLO DE PRAMETRO COMPARTIDO
 
 // procesa pedido de get. Ahora usamos router en MVC. son tutas 
-router.get("/register", userController.register);
-router.get("/login", userController.loguearse);
+//para ir a la pagina de registro
+router.get("/register/", userController.register);
+//para ir a la pagina de login
+router.get("/login/", userController.loguearse);
+
 
 module.exports = router;
