@@ -37,13 +37,15 @@ const controlador ={ //
             totalPrice:totalPrice});
     },
 
-     //-----------------------------INICIO Crear Producto------------------------------------------
-    //-----------------------------CREATE------------------------------------------
+     //-----------------------------INICIO Crear Producto---------------------
+    //-----------------------------CREATE-------------------------------------
     //nos manda a la pagina de vender.. Osea crear un producto para vender
     create:(req, res)=>{//va a una pagina
         res.render('product-create-form');
     },
-    //-----------------------------PROCESSCREATE------------------------------------
+
+
+    //-----------------------------PROCESSCREATE-------------------------------
         //Llenamos la pagina para crear un producto para vender y lo guadamos en la BD
     processCreate:(req, res)=>{
         //llamamos a todos lo datos
@@ -69,14 +71,19 @@ const controlador ={ //
         // la barra es porque vamos a una direccion que es la de lista de productos -- controller list
         res.redirect("/product/list")//se hace un nuevo pedido al servidor y se va o nos refresca en la patalla una vez guardado el lista de producto controlloer list
     },
-    //-----------------------------FIN  Crear Producto-------------------------------------------
+    //-----------------------------FIN  Crear Producto------------------------
 
-    //-----------------------------LIST------------------------------------
+
+
+    //-----------------------------LIST---------------------------------------
     list:(req, res)=>{//muestra todos los productos de la lista
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('products',{'listaProductos':products})//es 'prodct' porque acordate que es el archivo .ejs el que.. antes coincidia.. se cambio para ser mas claros.
     },
-    //-----------------------------EDIT------------------------------------
+
+
+     //-----------------------------INICIO Editar Producto---------------------
+    //-----------------------------EDIT----------------------------------------
     edit:(req, res)=>{
         let id = req.params.id //esto es lo que nos llega por parametro
         
@@ -89,10 +96,39 @@ const controlador ={ //
         //Listo para mandar a .ejs//se pone el nombre del ejs entre ''.
         res.render('product-edit-form',{producto:productFiltrado,});
     },
-    //-----------------------------UPTADE------------------------------------
-    update:(req, res)=>{
-        res.send(req.body);
+    //-----------------------------processEdit----------------------------------
+    processEdit:(req, res)=>{
+        //llamamos a todos lo datos
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+        let id = req.params.id
+        let productoIdBody = products.find(producto=>{
+            return producto.id == id;
+        })
+
+        let productoEditado ={
+            id: productoIdBody.id, 
+            name: req.body.name,
+            price: req.body.price,
+            discount: req.body.discount,
+            category: req.body.category,
+            description: req.body.description,
+            image: productoIdBody.image
+        }
+        // MOdificar el array en el Id que esta posicionado - 
+        let indice = products.findIndex(product =>{
+            return product.id = id;
+        })
+        console.log(indice);
+        console.log(productoEditado);
+        //Grabamos en la BD
+        /* fs.writeFileSync(productsFilePath, JSON.stringify(products, null," "));//?? */
+        // la barra es porque vamos a una direccion que es la de lista de productos -- controller list
+        res.redirect("/product/list")
     },
+    //-----------------------------FIN  Crear Producto--------------------------
+
+
     //-----------------------------DELETE------------------------------------
     delete:(req, res)=>{//eliminar de BD
         let id = req.params.id //esto es lo que nos llega por parametro
