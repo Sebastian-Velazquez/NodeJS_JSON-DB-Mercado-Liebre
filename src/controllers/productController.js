@@ -6,7 +6,7 @@ guardados en la carpeta Data como Json (un array de objetos literales) */
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 /* const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
 
-const controlador ={ //IMPORTANTE
+const controlador ={ //
     //-----------------------------OFERTA---------------------------------------
     oferta:(req, res)=>{
             let listaOferta = [
