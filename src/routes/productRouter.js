@@ -20,7 +20,7 @@ router.get("/detail/:id", productController.detail);
 router.get("/create/", productController.create);//muestra la vista o pagina
 router.post("/create/", productController.processCreate);//se encarga de procesar los datos cuando se ejecuta el boton comit
 
-//manda toda la lista de productos Lista de productos
+//manda toda la lista de productos Lista de productosd
 router.get("/list", productController.list);
 
 module.exports = router;
