@@ -25,6 +25,9 @@ router.get("/list", productController.list);
 
 //Editar prducto get y put
 router.get("/edit/:id/", productController.edit);
-/* router.get("/edit", userController.edit); */
+router.put("/edit/:id/", productController.update);//en el form se usa PUT -- pero se usa ?_method=PUT en action
+
+//Eliminar un prducto
+router.delete("/delete/:id/", productController.delete);
 
 module.exports = router;
