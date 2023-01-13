@@ -1,3 +1,6 @@
+@import url(normalize.css);
+@import url(header.css);
+@import url(footer.css);
 /*====== Fonts ======*/
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
 
@@ -15,7 +18,7 @@
 
 
 /*====== Basics ======*/
-* {
+/* * {
   box-sizing: border-box;
 }
 
@@ -62,11 +65,11 @@ textarea {
 hr {
   border: none;
   border-bottom: solid 1px var(--light-gray);
-}
+} */
 
 
 /*====== Main Header ======*/
-.main-header {
+/* .main-header {
   padding: 15px 0;
   background-color: var(--yellow);
 }
@@ -109,7 +112,7 @@ hr {
   cursor: pointer;
 }
 
-
+ */
 /*====== Main Navbar ======*/
 .btn-toggle-navbar {
   background-color: var(--dark-blue);
