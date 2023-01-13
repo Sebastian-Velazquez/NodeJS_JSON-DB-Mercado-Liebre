@@ -16,7 +16,7 @@
     margin: 15px;   
     width: 90%;
     text-align: center;
-    padding: 0 5px;
+    
 }
 /* ----------------cajaDeLosArticulos---------------------------- */
 .articilo_article__caja{
@@ -24,6 +24,7 @@
     /* justify-content: center; */
     position: relative;
     margin-bottom: 15px ;
+    margin:  5px;
 }
 /* ----------------descipcionDelArticulo---------------------------- */
 .div-descripcion{
@@ -107,7 +108,7 @@ box-shadow: 1px 3px 8px 12px rgba(122,122,122,1);
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
-    justify-content:space-between;
+    justify-content: space-evenly;
 }
 }
 
