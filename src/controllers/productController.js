@@ -134,12 +134,12 @@ const controlador ={ //
         let id = req.params.id //esto es lo que nos llega por parametro
         
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        //Retorna el producto con el id mandado del req.params.id
-        let productFiltrado = products.find(producto=>{
-            return producto.id == id;
+        //Retorna todos los id menos el que esta en la condicion
+        let productFiltrado = products.filter(producto=>{
+            return producto.id != id;
         });
-        res.send("Producto " + productFiltrado.name + " eliminado");
-        
+        fs.writeFileSync(productsFilePath, JSON.stringify(productFiltrado, null," "));//
+        res.redirect("/product/list")
     }
 }
 

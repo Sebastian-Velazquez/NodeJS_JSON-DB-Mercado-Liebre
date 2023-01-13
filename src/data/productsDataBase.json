@@ -1,14 +1,5 @@
 [
  {
-  "id": 1,
-  "name": "Cafetera Moulinex Dolce Gusto Edited",
-  "price": 100,
-  "discount": 50,
-  "category": "visited",
-  "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-  "image": "img-cafetera-moulinex.jpg"
- },
- {
   "id": 2,
   "name": "Macbook Pro 2022",
   "price": 500,
@@ -19,30 +10,12 @@
  },
  {
   "id": 3,
-  "name": "Samsung Galaxy S10",
-  "price": 72999,
-  "discount": 25,
+  "name": "Samsung Galaxy S10 de Marisol",
+  "price": "10",
+  "discount": "25",
   "category": "in-sale",
   "description": "Experiencia visual excepcional. Mirá tus series y películas favoritas con la mejor definición.Tendrás colores brillantes y detalles precisos en todos tus contenidos.Disfrutá aún más del mejor entretenimiento gracias a su vasta pantalla y ángulos de visión amplios.",
   "image": "img-samsung-galaxy-s10.jpg"
- },
- {
-  "id": 4,
-  "name": "Heladera no frost Whirlpool WRM45A",
-  "description": "Disfrutá de la frescura de tus alimentos y almacenalos de manera práctica y cómoda en tu heladera Whirlpool, la protagonista de tu cocina. Su sistema no frost evita la generación de escarcha y te permitirá conservar el sabor y las propiedades nutritivas de los productos.A su vez, su freezer cuenta con una capacidad de 86 litros, que facilitará la distribución y el orden de tus congelados para que no te preocupes por la falta de espacio.",
-  "price": 47900,
-  "discount": 10,
-  "image": "img-heladera-whirpool.jpg",
-  "category": "in-sale"
- },
- {
-  "id": 5,
-  "name": "Nikon Reflex D3500 - Kit Marisol",
-  "price": "53000",
-  "discount": "20",
-  "category": "",
-  "description": "Incluye la cámara D3500, el objetivo zoom AF-P DX NIKKOR 18-55mm y el superteleobjetivo zoom compacto AF-P DX NIKKOR 70-300mm. Ambos objetivos enfocan de forma rápida y silenciosa, lo que resulta ideal para grabar metraje de vídeo sin que se escuche apenas el ruido del accionamiento.",
-  "image": "img-camara-nikon.jpg"
  },
  {
   "id": 6,
@@ -142,14 +115,5 @@
   "category": "in-sale",
   "description": "Deja que la música dance cobre vida con EXTRA BASS™ Anima el ambiente con EXTRA BASS™1. Un radiador pasivo trabaja con el parlante monoaural para potenciar los tonos bajos y mejorar los graves, a pesar del tamaño compacto. ",
   "image": "img-parlante-sony.jpg"
- },
- {
-  "id": 17,
-  "name": "a",
-  "price": "10",
-  "discount": "1",
-  "category": "",
-  "description": "a",
-  "image": "default-image.png"
  }
 ]
