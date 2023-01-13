@@ -37,12 +37,12 @@
  },
  {
   "id": 5,
-  "name": "Nikon Reflex D3500 - Kit",
+  "name": "Nikon Reflex D3500 - Kit Marisol",
+  "price": "53000",
+  "discount": "20",
+  "category": "",
   "description": "Incluye la cámara D3500, el objetivo zoom AF-P DX NIKKOR 18-55mm y el superteleobjetivo zoom compacto AF-P DX NIKKOR 70-300mm. Ambos objetivos enfocan de forma rápida y silenciosa, lo que resulta ideal para grabar metraje de vídeo sin que se escuche apenas el ruido del accionamiento.",
-  "price": 53000,
-  "discount": 20,
-  "image": "img-camara-nikon.jpg",
-  "category": "in-sale"
+  "image": "img-camara-nikon.jpg"
  },
  {
   "id": 6,

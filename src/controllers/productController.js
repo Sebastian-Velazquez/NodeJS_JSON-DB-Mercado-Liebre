@@ -119,10 +119,10 @@ const controlador ={ //
         let indice = products.findIndex(producto =>{
             return producto.id == id;
         })
-        console.log(indice);
-        console.log(productoEditado);
+        //en products donde se encontro el indice se va a reemplazar por el producto editado en la pagina ejs req.body
+        products[indice] = productoEditado
         //Grabamos en la BD
-        /* fs.writeFileSync(productsFilePath, JSON.stringify(products, null," "));//?? */
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null," "));//
         // la barra es porque vamos a una direccion que es la de lista de productos -- controller list
         res.redirect("/product/list")
     },
