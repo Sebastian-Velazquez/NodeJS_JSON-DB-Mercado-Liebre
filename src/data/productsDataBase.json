@@ -142,5 +142,14 @@
   "category": "in-sale",
   "description": "aaaaaaa",
   "image": "default-image.png"
+ },
+ {
+  "id": 17,
+  "name": "sube",
+  "price": "1000",
+  "discount": "10",
+  "category": "in-sale",
+  "description": "sube",
+  "image": "productImage-1673661113005.jpg"
  }
 ]

@@ -61,7 +61,7 @@ const controlador ={ //
             discount: req.body.discount,
             category: req.body.category,
             description: req.body.description,
-            image: 'default-image.png'
+            image: req.file ? req.file.filename : "default-image.png" //if ternario
         }
         // Push - 
         products.push(productoNuevo);
