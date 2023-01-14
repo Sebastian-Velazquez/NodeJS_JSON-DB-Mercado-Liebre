@@ -113,7 +113,7 @@ const controlador ={ //
             discount: req.body.discount,
             category: req.body.category,
             description: req.body.description,
-            image: productoIdBody.image
+            image: req.file ? req.file.filename : productoIdBody.image
         }
         // MOdificar el array en el Id que esta posicionado - 
         let indice = products.findIndex(producto =>{

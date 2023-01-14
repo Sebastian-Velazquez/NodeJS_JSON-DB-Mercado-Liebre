@@ -40,7 +40,7 @@ router.get("/list", productController.list);
 
 //Editar prducto get y put
 router.get("/edit/:id/", productController.edit);
-router.put("/edit/:id/", productController.processEdit);//en el form se usa POST -- pero se usa ?_method=PUT en action
+router.put("/edit/:id/", upload.single("productImage"), productController.processEdit);//en el form se usa POST -- pero se usa ?_method=PUT en action
 
 //Eliminar un prducto
 router.delete("/delete/:id/", productController.delete);
