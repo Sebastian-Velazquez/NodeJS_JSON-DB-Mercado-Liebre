@@ -126,7 +126,7 @@ const controlador ={ //
         // la barra es porque vamos a una direccion que es la de lista de productos -- controller list
         res.redirect("/product/list")
     },
-    //-----------------------------FIN  Crear Producto--------------------------
+    //-----------------------------FIN  Editar Producto--------------------------
 
 
     //-----------------------------DELETE------------------------------------
