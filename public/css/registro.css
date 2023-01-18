@@ -1,13 +1,15 @@
 @import url(normalize.css);
 @import url(header.css);
 @import url(footer.css);
-
+p{
+    color: red;
+}
 main{
     background-color: #ebebeb;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
 }
 /* ----------------contentDelForm---------------------------- */
 .content-form{
