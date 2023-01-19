@@ -16,21 +16,39 @@
 <body>
     <%- include('parcials/header.ejs') %>
     <main>
-        <%- include('parcials/banner.ejs') %>
+        <!-- <%- include('parcials/banner.ejs') %>
         <% if (locals.errors){ %>
             <% for( let oneErros in errors) { %>
-            <p><%= errors[oneErros].msg %> </p>
+            <p class="alertError"><%= errors[oneErros].msg %> </p>
             <% } %>      
-        <% } %>
+        <% } %> -->
         <form action="/user/register" method="POST" class="content-form">
             <h1>Registrarse</h1>
-            <input type="text" placeholder="Ingrese nombre" name="firstName" class="main-form__imput">
-            <input type="text" placeholder="Ingrese apellido" name="lastName" class="main-form__imput">
+            <!-- Nombre> -->
+            <h2>Nombre y apellido</h2>
+            <input type="text" placeholder="Ingrese nombre" name="firstName" class="main-form__imput is-invalid"
+                value="<%= locals.oldData ? oldData.firstName : null %>">
+                <!-- Validacion de registro -->
+                <% if (locals.errors && errors.firstName){ %>
+                <p class="alertError"><%= errors.firstName.msg %> </p>
+                <% } %>
+            <!-- Apellido -->
+            <input type="text" placeholder="Ingrese apellido" name="lastName" class="main-form__imput"
+                value="<%= locals.oldData ? oldData.lastName : null %>">
+                <!-- validacion de apellido -->
+                <% if (locals.errors && errors.lastName){ %>
+                    <p class="alertError"><%= errors.lastName.msg %> </p>
+                <% } %>
             <!-- <h2>Fecha de nacimiento</h2>
             <input type="date" name="fechaDeNacimiento" class="main-form__imput">
             <input type="text" placeholder="Domicilio" name="domicilio" class="main-form__imput"> -->
             <h2>Email</h2>
-            <input type="email" placeholder="Ingrese su email" name="email" class="main-form__imput">
+                <input type="email" placeholder="Ingrese su email" name="email" class="main-form__imput"
+                value="<%= locals.oldData ? oldData.email : null %>">
+                <!-- Validacion de Email -->
+                <% if (locals.errors && errors.email){ %>
+                    <p class="alertError"><%= errors.email.msg %> </p>
+                <% } %>
             <!-- <h2>Intereses</h2>
             <div class="content-checkbox">
                 <label class="label-imput"><input type="checkbox" name="checkboxElectro" class="main-form__imput--checkbox">Electro</label>
@@ -40,10 +58,21 @@
                 <label class="label-imput"><input type="checkbox" name="checkboxVidaSana" class="main-form__imput--checkbox">VidaSana</label>
             </div> -->
             <h2>Contraseña</h2>
-            <input type="password" name="password" placeholder="Ingrese contraseña" class="main-form__imput">
-            <input type="password" name="repeatPassword" placeholder="Repetir contraseña" class="main-form__imput">
+            <input type="password" name="password" placeholder="Ingrese contraseña" class="main-form__imput"
+                value="<%= locals.oldData ? oldData.password : null %>">
+                <% if (locals.errors && errors.password){ %>
+                    <p class="alertError"><%= errors.password.msg %> </p>
+                <% } %>
+            <input type="password" name="repeatPassword" placeholder="Repetir contraseña" class="main-form__imput"
+                value="<%= locals.oldData ? oldData.repeatPassword : null %>">
+                <% if (locals.errors && errors.password){ %>
+                    <p class="alertError"><%= errors.password.msg %> </p>
+                <% } %>
             <h2>Foto de Perfil</h2>
-            <input type="file" name="profilePicture" class="main-form__imput">
+            <input type="file" name="image" class="main-form__imput">
+            <% if (locals.errors && errors.image){ %>
+                <p class="alertError"><%= errors.image.msg %> </p>
+            <% } %>
             <div class="conten-botones">
                 <input type="submit"  class="submit">
             </div>  

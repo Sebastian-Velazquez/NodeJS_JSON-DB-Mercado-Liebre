@@ -1,7 +1,7 @@
 @import url(normalize.css);
 @import url(header.css);
 @import url(footer.css);
-p{
+.alertError{
     color: red;
 }
 main{

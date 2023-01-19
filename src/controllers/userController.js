@@ -8,9 +8,12 @@ const controlador ={ //IMPORTANTE
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0){//resultValidation.errors es un objeto literal
-        return res.render('register', {errors: resultValidation.mapped()}) //mapped: pasa la variable resultValidation a literiario
-            errors: resultValidation.mapped();
+        return res.render('register', {
+            errors: resultValidation.mapped(), //mapped: pasa la variable resultValidation a literiario 
+            oldData: req.body //Para mostrar los datos bien ingresados
+            }) 
         }
+        return res.send('Te registrarte con exito')
     },
     loguearse:(req, res)=>{
         return res.render('login');
