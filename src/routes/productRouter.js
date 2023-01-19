@@ -6,9 +6,6 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");//para multer
 
-// llamamos a la ruta de controlador
-const productController = require("../controllers/productController.js");
-
 //-----------------Multer--------------------
 const storage = multer.diskStorage({
     destination : function(req, file, cb){
@@ -25,6 +22,9 @@ const upload = multer({storage:storage})
 // procesa pedido de get. Ahora usamos router en MVC. son tutas 
 /* router.get("/list", mainController.list); */ //EJEMPLO DE PRAMETRO COMPARTIDO
 
+
+// llamamos a la ruta de controlador
+const productController = require("../controllers/productController.js");
 // procesa pedido de get. Ahora usamos router en MVC. son tutas 
 router.get("/ofertas/", productController.oferta);
 
