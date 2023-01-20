@@ -28,7 +28,7 @@ const validations =[
     body('firstName').notEmpty().withMessage('Tienes que escribir tu nombre'),  //firstName sale del name de ejs. notEmty es una validacion, valida si el campo esta vacio
     body('lastName').notEmpty().withMessage('Tienes que escribir tu apellido'),//withMessage: para cambiar el mesaje de error
     body('email').notEmpty().withMessage('Tienes que escribir tu email').bail()//bail para que cote la ejecicion, en este caso si hay un campo vacio
-                 .isEmail().withMessage('Debes escribir un formato de email correcto. Ejemplo, info@mail.com'),
+                .isEmail().withMessage('Debes escribir un formato de email correcto. Ejemplo, info@mail.com'),
     body('password').notEmpty().withMessage('Tienes que escribir un password'),
     body('repeatPassword').notEmpty().withMessage('Tienes que escribir un password'),
     body('image').custom((value, {req})=> {
