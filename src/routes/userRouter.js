@@ -33,13 +33,13 @@ const validations =[
     body('repeatPassword').notEmpty().withMessage('Tienes que escribir un password'),
     body('image').custom((value, {req})=> {
         let file = req.file;
-        console.log(file)
+        /* console.log(file) */
         let aceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
         
         if (!file){
             throw new Error('Tenes que subir una imagen'); //sacado directamente de express-validator
         } else {
-            let fileExtension = path.extname(file.fieldname);
+            let fileExtension = path.extname(file.originalname);
             if (!aceptedExtensions.includes(fileExtension)){
                 throw new Error(`Las extensiones de archivo permitidos son ${aceptedExtensions.join(', ')}`)
             }
