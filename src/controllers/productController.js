@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path'); 
+const {validationResult} = require('express-validator'); //validationResult es una funcion que tambien nos lo da express-validator 
 
 /* En la constante "products" ya tienen los productos que están 
 guardados en la carpeta Data como Json (un array de objetos literales) */
@@ -48,6 +49,15 @@ const controlador ={ //
     //-----------------------------PROCESSCREATE-------------------------------
         //Llenamos la pagina para crear un producto para vender y lo guadamos en la BD
     processCreate:(req, res)=>{
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0){//resultValidation.errors es un objeto literal
+            return res.render('product-create-form', {
+                errors: resultValidation.mapped(), //mapped: pasa la variable resultValidation a literiario 
+                oldData: req.body //Para mostrar los datos bien ingresados
+                }) 
+            }
+            //return res.send('Te registrarte con exito')
+        
         //llamamos a todos lo datos
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -70,6 +80,7 @@ const controlador ={ //
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null," "));//??
         // la barra es porque vamos a una direccion que es la de lista de productos -- controller list
         res.redirect("/product/list")//se hace un nuevo pedido al servidor y se va o nos refresca en la patalla una vez guardado el lista de producto controlloer list
+    
     },
     //-----------------------------FIN  Crear Producto------------------------
 

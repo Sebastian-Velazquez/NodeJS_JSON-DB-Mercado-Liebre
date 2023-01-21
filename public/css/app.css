@@ -3,8 +3,10 @@
 @import url(footer.css);
 /*====== Fonts ======*/
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
-
-
+/* color fuente cartel de error*/
+.alertError{
+  color: red;
+}
 /*====== Variables ======*/
 :root {
   --yellow: #EAC926;

@@ -27,7 +27,7 @@
             <!-- Nombre> -->
             <h2>Nombre y apellido</h2>
             <input type="text" placeholder="Ingrese nombre" name="firstName" class="main-form__imput is-invalid"
-                value="<%= locals.oldData ? oldData.firstName : null %>">
+                value="<%= locals.oldData ? oldData.firstName : null %>"><!-- Para dejar el lo que pusiste bien en el input -->
                 <!-- Validacion de registro -->
                 <% if (locals.errors && errors.firstName){ %>
                 <p class="alertError"><%= errors.firstName.msg %> </p>
