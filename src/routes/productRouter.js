@@ -10,8 +10,6 @@ const productController = require("../controllers/productController.js");
 
 //Middleware
 const upload = require("../middlewares/multerMiddleware");
-console.log(upload);
-
 
 router.get("/ofertas/", productController.oferta);// procesa pedido de get. Ahora usamos router en MVC. son tutas 
 
