@@ -49,13 +49,10 @@ const controlador ={ //
     //-----------------------------PROCESSCREATE-------------------------------
         //Llenamos la pagina para crear un producto para vender y lo guadamos en la BD
     processCreate:(req, res)=>{
-        const resultValidation = validationResult(req);
-        if (resultValidation.errors.length > 0){//resultValidation.errors es un objeto literal
-            return res.render('product-create-form', {
-                errors: resultValidation.mapped(), //mapped: pasa la variable resultValidation a literiario 
-                oldData: req.body //Para mostrar los datos bien ingresados
-                }) 
-            }
+        const resultValidation = validationResult(req);//validacion
+        if (resultValidation.errors.length > 0){//resultValidation.errors es un objeto literal//mapped: pasa la variable resultValidation a literiario
+            return res.render('product-create-form', {errors: resultValidation.mapped(), oldData: req.body }) //Para mostrar los datos bien ingresados
+            }//si todo esta bien se guarda
             //return res.send('Te registrarte con exito')
         
         //llamamos a todos lo datos
