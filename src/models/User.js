@@ -3,6 +3,7 @@
 
 const fs = require('fs');
 const path = require('path'); 
+const { subscribe } = require('../routes/userRouter');
 
 
 const User = {
@@ -31,6 +32,11 @@ const User = {
             //ejeturar en la consola: node src/models/User.js
     },
     create: function(userData){
+        let allUsers = this.findAll();//llamo a todos los usuarios
+        allUsers.push(userData);//fileName es el la ubucacion de la DB echo en arriba loprimero que se hizo en el metodo literario que estamos
+        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null," "));//Es para suscribir en la base de datos json
+        //subscribo el allUsers en filename para que quede guardado
+        return true;
     }
 }
-console.log(User.findByField('email','gsantora1@slideshare.net'));
+console.log(User.create({email: 'gsantora1@slideshare.net'}));

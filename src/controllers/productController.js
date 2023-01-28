@@ -74,7 +74,7 @@ const controlador ={ //
         products.push(productoNuevo);
         
         //Grabamos en la BD
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null," "));//??
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null," "));//Es para suscribir en la base de datos json
         // la barra es porque vamos a una direccion que es la de lista de productos -- controller list
         res.redirect("/product/list")//se hace un nuevo pedido al servidor y se va o nos refresca en la patalla una vez guardado el lista de producto controlloer list
     
