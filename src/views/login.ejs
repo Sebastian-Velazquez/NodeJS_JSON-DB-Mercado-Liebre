@@ -14,8 +14,12 @@
         <%- include('parcials/header.ejs') %>
             <main>
                 <%- include('parcials/banner.ejs') %>
-                <form action="#" method="#" class="content-form">
-                    <input type="text" placeholder="Nombre de usuario" name="nombreYApellido" class="main-form__imput">
+                <form action="/user/login" method="POSt" class="content-form">
+                    <input type="email" placeholder="Email" name="email" class="main-form__imput">
+                    <!-- Validacion de Email -->
+                <% if (locals.errors && errors.email){ %>
+                    <p class="alertError"><%= errors.email.msg %> </p>
+                <% } %>
                     <input type="text" placeholder="Contraseña" name="nombreDeUsuario" class="main-form__imput">  
                     <div class="conten-botones">
                         <input type="submit" name="registrarse" class="submit">
