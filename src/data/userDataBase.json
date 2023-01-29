@@ -1,4 +1,5 @@
-[{
+[
+ {
   "id": 1,
   "first_name": "Alford",
   "lastName": "apellido",
@@ -6,7 +7,8 @@
   "password": "dCLCPY7pcE",
   "category": "customer",
   "image": "Alford Cowdry"
-}, {
+ },
+ {
   "id": 2,
   "first_name": "Glenn",
   "lastName": "apellido",
@@ -14,7 +16,8 @@
   "password": "8LvU5I9",
   "category": "admin",
   "image": "Glenn Santora"
-}, {
+ },
+ {
   "id": 3,
   "first_name": "Reeva",
   "lastName": "apellido",
@@ -22,7 +25,8 @@
   "password": "Zh8C2R",
   "category": "admin",
   "image": "Reeva Klulisek"
-}, {
+ },
+ {
   "id": 4,
   "first_name": "Sayers",
   "lastName": "apellido",
@@ -30,7 +34,8 @@
   "password": "cjg41nJ",
   "category": "customer",
   "image": "Sayers Ernke"
-}, {
+ },
+ {
   "id": 5,
   "first_name": "Yoko",
   "lastName": "apellido",
@@ -38,7 +43,8 @@
   "password": "QTlkardF1Ic",
   "category": "admin",
   "image": "Yoko Rubens"
-}, {
+ },
+ {
   "id": 6,
   "first_name": "Duane",
   "lastName": "apellido",
@@ -46,7 +52,8 @@
   "password": "P9RBs1",
   "category": "customer",
   "image": "Duane Wooff"
-}, {
+ },
+ {
   "id": 7,
   "first_name": "Shannan",
   "lastName": "apellido",
@@ -54,7 +61,8 @@
   "password": "AurNDHu0QqY8",
   "category": "customer",
   "image": "Shannan Ixor"
-}, {
+ },
+ {
   "id": 8,
   "first_name": "Barrie",
   "lastName": "apellido",
@@ -62,7 +70,8 @@
   "password": "ewgEvQitw",
   "category": "admin",
   "image": "Barrie Vannet"
-}, {
+ },
+ {
   "id": 9,
   "first_name": "Lucias",
   "lastName": "apellido",
@@ -70,7 +79,8 @@
   "password": "h6msQ6",
   "category": "customer",
   "image": "Lucias Barok"
-}, {
+ },
+ {
   "id": 10,
   "first_name": "Gasparo",
   "lastName": "apellido",
@@ -78,7 +88,8 @@
   "password": "1yjbJ7VT8Z",
   "category": "customer",
   "image": "Gasparo Vanini"
-}, {
+ },
+ {
   "id": 11,
   "first_name": "Ronna",
   "lastName": "apellido",
@@ -86,7 +97,8 @@
   "password": "9TDEBX",
   "category": "admin",
   "image": "Ronna Bardey"
-}, {
+ },
+ {
   "id": 12,
   "first_name": "Rabbi",
   "lastName": "apellido",
@@ -94,7 +106,8 @@
   "password": "WtTBE3",
   "category": "customer",
   "image": "Rabbi Jackways"
-}, {
+ },
+ {
   "id": 13,
   "first_name": "Rozella",
   "lastName": "apellido",
@@ -102,7 +115,8 @@
   "password": "EqKyHXWa8jY",
   "category": "admin",
   "image": "Rozella Gillmor"
-}, {
+ },
+ {
   "id": 14,
   "first_name": "Rourke",
   "lastName": "apellido",
@@ -110,7 +124,8 @@
   "password": "lmFGCKLIC",
   "category": "customer",
   "image": "Rourke Francom"
-}, {
+ },
+ {
   "id": 15,
   "first_name": "Domeniga",
   "lastName": "apellido",
@@ -118,7 +133,8 @@
   "password": "tvSwxoWhS",
   "category": "admin",
   "image": "Domeniga Lyston"
-}, {
+ },
+ {
   "id": 16,
   "first_name": "Seamus",
   "lastName": "apellido",
@@ -126,7 +142,8 @@
   "password": "6KJxaz9",
   "category": "customer",
   "image": "Seamus Mattes"
-}, {
+ },
+ {
   "id": 17,
   "first_name": "Malvin",
   "lastName": "apellido",
@@ -134,7 +151,8 @@
   "password": "QPGGO3x6",
   "category": "customer",
   "image": "Malvin Seeman"
-}, {
+ },
+ {
   "id": 18,
   "first_name": "Daphna",
   "lastName": "apellido",
@@ -142,4 +160,23 @@
   "password": "pRVBa0FDJ7tw",
   "category": "admin",
   "image": "Daphna Labrenz"
-}]
+ },
+ {
+  "id": 19,
+  "firstName": "asd",
+  "lastName": "asd",
+  "email": "sergio@sergio.com",
+  "password": "$2a$10$4O..lJKeZOh.28YAV2PB1uP4QWpnbkCpPIvk8IAnYRZTTtw/oAroK",
+  "repeatPassword": "asd",
+  "image": "image-1674959271256.jpg"
+ },
+ {
+  "id": 20,
+  "firstName": "Sergio Sebastian",
+  "lastName": "Velazquez",
+  "email": "sergio@sergio.con",
+  "password": "$2a$10$q8oLNEnrfu6Cp90CQtxlnuXGFL1/nHObzJalfh3cYDFiektEQWcM.",
+  "repeatPassword": "asd",
+  "image": "image-1674960572986.jpg"
+ }
+]
