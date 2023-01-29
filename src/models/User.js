@@ -31,6 +31,11 @@ const User = {
             //ejemplo para entender(sacarlo del array): console.log(User.findByField('email','gsantora1@slideshare.net')); 
             //ejeturar en la consola: node src/models/User.js
     },
+    generateID: function(){ //generar id ya que json no es como sql que solo lo genera.
+        let allUsers = this.findAll();
+        let lastUser = allUsers.pop();
+        return lastUser.id + 1;
+    },
     create: function(userData){
         let allUsers = this.findAll();//llamo a todos los usuarios
         allUsers.push(userData);//fileName es el la ubucacion de la DB echo en arriba loprimero que se hizo en el metodo literario que estamos
@@ -39,4 +44,4 @@ const User = {
         return true;
     }
 }
-console.log(User.create({email: 'gsantora1@slideshare.net'}));
+console.log(User.generateID());
