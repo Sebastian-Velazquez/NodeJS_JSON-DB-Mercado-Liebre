@@ -34,14 +34,30 @@ const User = {
     generateID: function(){ //generar id ya que json no es como sql que solo lo genera.
         let allUsers = this.findAll();
         let lastUser = allUsers.pop();
-        return lastUser.id + 1;
+        if(lastUser){
+            return lastUser.id + 1;
+        } return 1;
     },
     create: function(userData){
         let allUsers = this.findAll();//llamo a todos los usuarios
-        allUsers.push(userData);//fileName es el la ubucacion de la DB echo en arriba loprimero que se hizo en el metodo literario que estamos
+        
+        let newUser = {//poara json que para incorporar id
+            id: this.generateID(),
+            ...userData 
+        } //quieredecir que va a contener el id mas todo lo que esta en allUsers
+        
+        allUsers.push(newUser);//fileName es el la ubucacion de la DB echo en arriba loprimero que se hizo en el metodo literario que estamos
         fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null," "));//Es para suscribir en la base de datos json
         //subscribo el allUsers en filename para que quede guardado
+        return newUser;
+    },
+    delete: function(id){
+        let allUsers = this.findAll();//llamo a todos los usuarios
+        let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
+        fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null," "));
         return true;
     }
 }
-console.log(User.generateID());
+
+
+module.exports = User;
