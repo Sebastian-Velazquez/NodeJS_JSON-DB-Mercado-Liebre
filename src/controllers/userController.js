@@ -4,20 +4,19 @@ const bcryptjs = require('bcryptjs');//para encriptar contrasenias
 const User = require('../models/User')
 
 const controlador ={ //IMPORTANTE
+    /********Crear Registro **********/
     register:(req, res)=>{
         return res.render('register');
     },
     processRegister:(req,res)=>{
+        //Validacion de Middlewares
         const resultValidation = validationResult(req);
-
         if (resultValidation.errors.length > 0){//resultValidation.errors es un objeto literal
         return res.render('register', {
             errors: resultValidation.mapped(), //mapped: pasa la variable resultValidation a literiario 
             oldData: req.body //Para mostrar los datos bien ingresados
             });
         }
-
-
         //Validamos si ya existe el mail ingresado antes de cargar el usuario nuevo
         let userInDB = User.findByField('email', req.body.email)
         if (userInDB){
@@ -28,8 +27,6 @@ const controlador ={ //IMPORTANTE
                 oldData: req.body //Para mostrar los datos bien ingresados
                 }) ; 
         }
-
-
 
         //crear el ususario
         let userToCreate = {//no me qedo entendido .. creo que es oara sacar el pash y no mostrar toda la infomacion del la ruta

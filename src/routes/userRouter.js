@@ -8,7 +8,7 @@ const router = express.Router();
 const userController = require("../controllers/userController.js");
 
 //Middleware
-const upload = require("../middlewares/multerMiddleware");
+const upload = require("../middlewares/userRouter/multerMiddlewaresUser");
 const validations = require("../middlewares/userRouter/validationMiddlewares");
 
 //para ir a la pagina de registro

@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override'); // GRUD Para poder usar los métodos PUT y DELETE
+//const middlewarePropio = require("./middlewares/middlewareEjemplo")
 
 const app = express();
 
@@ -14,6 +15,9 @@ app.use(express.static(path.join(__dirname, '../public')));  // Necesario para l
 app.use(express.urlencoded({ extended: false })); // Para capturar el body
 app.use(express.json()); // Para capturar el body
 app.use(methodOverride('_method'));//Para crar, eliminar y modificar.. se puede poner cualquier nombre en '_method'
+
+// Middlewares Propios// en app.js son globales. cada vez que pasamos por la pagina el app.js se ejecuta nuevamente
+//app.use(middlewarePropio);
 
 //es para que la carpeta del proyecto public sea publicom, van html ejs css
 app.set('view engine', 'ejs'); //para usar ejs

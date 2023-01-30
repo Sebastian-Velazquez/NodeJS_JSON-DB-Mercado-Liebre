@@ -25,5 +25,23 @@
   "password": "$2a$10$KRwWRl/aHjHnwSBzTlIsc.UJJwce33gNBDBTxCZ2SkuS9l0g6BzH.",
   "repeatPassword": "123",
   "image": "image-1674963820991.jpg"
+ },
+ {
+  "id": 4,
+  "firstName": "Sergio",
+  "lastName": "Velazquez",
+  "email": "seseve_06@hotmail.com",
+  "password": "$2a$10$S.uPbV1xkztDD.5fjGX9Iu7I80tU6jnl0TspoMyf7EAvodlh.WOJ.",
+  "repeatPassword": "123",
+  "image": "image-1675117371942.png"
+ },
+ {
+  "id": 5,
+  "firstName": "Sergio",
+  "lastName": "Velazquez",
+  "email": "sebastian@sebastian.com",
+  "password": "$2a$10$3Hy.NX8AFRuw4pEAUervlelyjlfyZg2.vB0YNd6KDjpjfTDqgqkqi",
+  "repeatPassword": "123",
+  "image": "image-1675121932652.jpeg"
  }
 ]
