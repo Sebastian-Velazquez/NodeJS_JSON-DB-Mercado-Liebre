@@ -25,5 +25,14 @@
   "password": "$2a$10$KRwWRl/aHjHnwSBzTlIsc.UJJwce33gNBDBTxCZ2SkuS9l0g6BzH.",
   "repeatPassword": "123",
   "image": "image-1674963820991.jpg"
+ },
+ {
+  "id": 4,
+  "firstName": "dasd",
+  "lastName": "asd",
+  "email": "Seseve_06@hotmail.com",
+  "password": "$2a$10$DhiDv5Dqvapgvd548RHN9OvE.vHWNN3078ZsnUJjZxHCmpIM1FBKa",
+  "repeatPassword": "asd",
+  "image": "image-1675043498172.jpg"
  }
 ]
