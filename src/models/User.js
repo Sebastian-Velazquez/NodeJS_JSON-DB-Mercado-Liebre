@@ -1,5 +1,5 @@
 //Se crea un metodo literal aca, que contendra todos lo metodos para el registro de usuario
-
+//se usa para poder reducir el codigo en los controllers y usarlo en varios lugar, asi reduciendo las lineas de codigo
 
 const fs = require('fs');
 const path = require('path'); 
@@ -30,15 +30,17 @@ const User = {
         return userFound; //retorna el usuario con el id igual al pasado por parametro
             //ejemplo para entender(sacarlo del array): console.log(User.findByField('email','gsantora1@slideshare.net')); 
             //ejeturar en la consola: node src/models/User.js
+            //Esto solo muestra al primero que encuentra.. si hay dos igual, mostrara uno. Es util esta funcion en campos unicos. o clave foranea y primaria
     },
     generateID: function(){ //generar id ya que json no es como sql que solo lo genera.
         let allUsers = this.findAll();
         let lastUser = allUsers.pop();
-        if(lastUser){
+        if(lastUser){//si la db tiene id retorama el ultimo +1.. sino el db esta vacio y retorna 1
             return lastUser.id + 1;
         } return 1;
     },
-    create: function(userData){
+    //Crear un usuario
+    create: function(userData){//userData: la idea que sea un objeto litera que llega despues del formulario
         let allUsers = this.findAll();//llamo a todos los usuarios
         
         let newUser = {//poara json que para incorporar id
@@ -53,8 +55,8 @@ const User = {
     },
     delete: function(id){
         let allUsers = this.findAll();//llamo a todos los usuarios
-        let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
-        fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null," "));
+        let finalUsers = allUsers.filter(oneUser => oneUser.id !== id); //devolmos todos los usuario menos el id que tomamos
+        fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null," "));//gramos toso los usuarios menos el que se busco
         return true;
     }
 }

@@ -9,15 +9,14 @@ const controlador ={ //IMPORTANTE
         return res.render('register');
     },
     processRegister:(req,res)=>{
+        //Validacion de Middlewares
         const resultValidation = validationResult(req);
-
         if (resultValidation.errors.length > 0){//resultValidation.errors es un objeto literal
         return res.render('register', {
             errors: resultValidation.mapped(), //mapped: pasa la variable resultValidation a literiario 
             oldData: req.body //Para mostrar los datos bien ingresados
             });
         }
-
         //Validamos si ya existe el mail ingresado antes de cargar el usuario nuevo
         let userInDB = User.findByField('email', req.body.email)
         if (userInDB){

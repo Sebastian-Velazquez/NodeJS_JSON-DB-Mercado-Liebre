@@ -144,21 +144,12 @@
   "image": "img-parlante-sony.jpg"
  },
  {
-  "id": 17,
-  "name": "",
-  "price": "",
-  "discount": "",
-  "category": "",
-  "description": "",
-  "image": "productImage-1674091050274.jpg"
- },
- {
-  "id": 18,
-  "name": "sdfs",
-  "price": "sdfs",
-  "discount": "sdfsd",
-  "category": "",
-  "description": "sdfsdf",
-  "image": "productImage-1674267189353.jpg"
+  "id": 19,
+  "name": "dasd",
+  "price": "21321",
+  "discount": "123",
+  "category": "in-sale",
+  "description": "123123",
+  "image": "image-1675122303027.jpg"
  }
 ]
