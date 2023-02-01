@@ -44,6 +44,7 @@ const controlador ={ //IMPORTANTE
     },
     processLoguearse:(req, res) => {
         let userToLogin = User.findByField('email', req.body.email);//etiar el login ejs
+        console.log(req.session)
         //return res.send(userToLogin)
         //console.log(userToLogin)
         if (userToLogin){//si obtuve algo es true
@@ -53,7 +54,7 @@ const controlador ={ //IMPORTANTE
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             //console.log(isOkThePassword)
             if(isOkThePassword){
-                return res.send('Oka podes ingresar')
+                return res.redirect('/user/profile')
             }
 
             //si el password no es valido
@@ -62,7 +63,7 @@ const controlador ={ //IMPORTANTE
                 email: {msg:'Las credenciales no son validas'}
             }
             })
-            console.log(isOkThePassword)
+            //console.log(isOkThePassword)
         }
 
         //si el email no se encuentra
@@ -71,7 +72,10 @@ const controlador ={ //IMPORTANTE
                 email: {msg:'No se encontro el email en DB'}
             }
         })
-    } 
+    },
+    profile:function(req, res){
+        return res.render('userProfile')
+    }
 }
 
         //exportamos el objeto literal con sus metodos

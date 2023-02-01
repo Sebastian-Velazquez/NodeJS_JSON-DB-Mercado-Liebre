@@ -1,16 +1,22 @@
 //va siempre
 const express = require('express');
+const session = require('express-session');//npm i express-session. Para tener link privados
 const path = require('path');
 const methodOverride = require('method-override'); // GRUD Para poder usar los métodos PUT y DELETE
 //const middlewarePropio = require("./middlewares/middlewareEjemplo")
 
 const app = express();
 
-//muestra infomacion adicional en la consela si se esta enviando informacion 
+//muestra infomacion adicional en la consola si se esta enviando informacion 
 const morgan = require('morgan');
 app.use(morgan('dev'));//muestra infomacion adicional en la consela si se esta enviando informacion 
 
 // Middlewares
+app.use(session({ //npm i express-session. Para bloquear a alguno usuarios que no estan loguados
+    secret: "Shh, It's a secret",
+    resave: false,
+    saveUninitialized: false,
+}))
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
 app.use(express.urlencoded({ extended: false })); // Para capturar el body
 app.use(express.json()); // Para capturar el body
@@ -26,7 +32,8 @@ app.set('views', path.join(__dirname, '/views')); //Es necesario para que la car
 // Importamos routers//const path = require('path');// para accder a las paginas
 const homeRouter = require('./routes/homeRouter.js')
 const userRouter = require('./routes/userRouter.js')
-const productRouter = require('./routes/productRouter.js')
+const productRouter = require('./routes/productRouter.js');
+
 
 // Usando los enrutadores importados linea 5
 app.use("/", homeRouter);

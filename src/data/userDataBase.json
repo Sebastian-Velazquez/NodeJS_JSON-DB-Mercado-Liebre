@@ -1,38 +1,11 @@
 [
  {
   "id": 1,
-  "first_name": "Alford",
-  "lastName": "apellido",
-  "email": "acowdry0@dailymail.co.uk",
-  "password": "dCLCPY7pcE",
-  "category": "customer",
-  "image": "Alford Cowdry"
- },
- {
-  "id": 2,
-  "first_name": "Glenn",
-  "lastName": "apellido",
-  "email": "gsantora1@slideshare.net",
-  "password": "8LvU5I9",
-  "category": "admin",
-  "image": "Glenn Santora"
- },
- {
-  "id": 3,
-  "firstName": "Sergio Sebastian",
+  "firstName": "Sergio",
   "lastName": "Velazquez",
-  "email": "sergio@sergio.com",
-  "password": "$2a$10$KRwWRl/aHjHnwSBzTlIsc.UJJwce33gNBDBTxCZ2SkuS9l0g6BzH.",
-  "repeatPassword": "123",
-  "image": "image-1674963820991.jpg"
- },
- {
-  "id": 4,
-  "firstName": "dasd",
-  "lastName": "asd",
   "email": "Seseve_06@hotmail.com",
-  "password": "$2a$10$DhiDv5Dqvapgvd548RHN9OvE.vHWNN3078ZsnUJjZxHCmpIM1FBKa",
+  "password": "$2a$10$hCapZxG6HG7DAfEBr2W8feO2ws0qRKfXPNNa1FzdAeSKzkGhTvpjO",
   "repeatPassword": "asd",
-  "image": "image-1675043498172.jpg"
+  "image": "image-1675207525018.jpeg"
  }
 ]

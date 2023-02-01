@@ -1,0 +1,10 @@
+@import url(normalize.css);
+@import url(header.css);
+@import url(footer.css);
+.container{
+    display: flex;
+    background-color: azure;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
