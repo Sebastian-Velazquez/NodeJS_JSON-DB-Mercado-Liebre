@@ -57,6 +57,11 @@ const controlador ={ //IMPORTANTE
                 delete userToLogin.password; // Borrra el password para que no quede guardado.
                 //Guardar el user logeado
                 req.session.userLogged =  userToLogin
+
+                if (req.body.recordame){//Si esta tildado el input que viaja por el body, seteamos una cookie
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2})//userEmail se lo damos ostros, luego le asignamos el req y por ultimos el tiempo que va a dirar la cookie con maxAge
+                }
+
                 return res.redirect('/user/profile')
             }
 
