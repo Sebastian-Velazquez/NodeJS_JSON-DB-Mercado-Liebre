@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- <link href="/css/main.css" rel="stylesheet">  -->
-        <!--     Pagina de icons sd/-->
+        <!--     Pagina de icons -->
         <script src="https://kit.fontawesome.com/aef00d3210.js" crossorigin="anonymous"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="/css/userProfile.css">
@@ -19,11 +19,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3">
-						<h2>Hi NOmbre </h2>
-						<img src="/img/avatar/default.png">
+						<h2> <%= user.firstName  %> <%= user.lastName  %></h2>
+						<img src="/img/avatar/<%= user.image %>" class="img-profile">
 						<br>
 						<br>
-						<div class="alert alert-success">Mail</div>
+						<div class="alert alert-success"><%= user.email %></div>
 					</div>
 				</div>
 			</div>

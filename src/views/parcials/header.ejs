@@ -15,16 +15,24 @@
         <lu class="nav-lista-menu__lista">
             <li class="nav-lista-menu__lista-nombre"><a href="/product/list">Todos los productos</a></li>
             <li class="nav-lista-menu__lista-nombre"><a href="#">Tiendas Oficiales</a></li>
+            <% if (locals.isLogged == false) { %> 
             <li class="nav-lista-menu__lista-nombre"><a href="/product/create">Vender</a></li>
+            <% } %> 
             <li class="nav-lista-menu__lista-nombre"><a href="#">Ayuda</a></li>
         </lu>
+
+
         <lu class="nav-lista-menu__lista">                        <!--  Icono cuenta https://fontawesome.com/-->
-            <li class="nav-lista-menu__lista-nombre"><a href="/user/profile">Perfil</a> <i class="fa-regular fa-id-card"></i></li>
+            <% if (locals.isLogged) { %> 
+            <li class="nav-lista-menu__lista-nombreA"><a href="/user/profile"><%= locals.userLogged.firstName %> <%= locals.userLogged.lastName %><img src="/img/avatar/<%= locals.userLogged.image %>" class="icons-profile"></a></li>
+            <li class="nav-lista-menu__lista-nombreA"><a href="/user/logout">Salir</li>
+                                <!--  Icono compra https://fontawesome.com/-->
+            <li class="nav-lista-menu__lista-nombre"><a href="#">Mis compras</a><i class="fa-solid fa-basket-shopping"></i></li>
+                    <% }else { %> 
             <li class="nav-lista-menu__lista-nombre"><a href="/user/register">Creá tu cuenta</a> <i class="fa-regular fa-id-card"></i></li>
                                 <!--  Icono ingresar https://fontawesome.com/-->
             <li class="nav-lista-menu__lista-nombre"><a href="/user/login">Ingresá</a><i class="fa-solid fa-right-to-bracket"></i></li>
-                            <!--  Icono compra https://fontawesome.com/-->
-            <li class="nav-lista-menu__lista-nombre"><a href="#">Mis compras</a><i class="fa-solid fa-basket-shopping"></i></li>
+            <% } %> 
         </lu>
     </nav>  
     <!--  Lista desplegable -->

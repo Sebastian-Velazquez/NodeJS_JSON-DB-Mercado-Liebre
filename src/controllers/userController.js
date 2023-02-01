@@ -44,7 +44,7 @@ const controlador ={ //IMPORTANTE
     },
     processLoguearse:(req, res) => {
         let userToLogin = User.findByField('email', req.body.email);//etiar el login ejs
-        console.log(req.session)
+        //console.log(req.session)
         //return res.send(userToLogin)
         //console.log(userToLogin)
         if (userToLogin){//si obtuve algo es true
@@ -54,6 +54,9 @@ const controlador ={ //IMPORTANTE
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             //console.log(isOkThePassword)
             if(isOkThePassword){
+                delete userToLogin.password; // Borrra el password para que no quede guardado.
+                //Guardar el user logeado
+                req.session.userLogged =  userToLogin
                 return res.redirect('/user/profile')
             }
 
@@ -74,7 +77,13 @@ const controlador ={ //IMPORTANTE
         })
     },
     profile:function(req, res){
-        return res.render('userProfile')
+        return res.render('userProfile',{
+            user: req.session.userLogged//le paso los datos del usuario logueado y ahora puedo imprimir datos a la vista ejs
+        });
+    },
+    logout:function(req,res){
+        req.session.destroy();//para destruir la session, osea salir del login del perfil
+        return res.redirect('/')
     }
 }
 

@@ -3,7 +3,7 @@ const express = require('express');
 const session = require('express-session');//npm i express-session. Para tener link privados
 const path = require('path');
 const methodOverride = require('method-override'); // GRUD Para poder usar los métodos PUT y DELETE
-//const middlewarePropio = require("./middlewares/middlewareEjemplo")
+const userLoggedMiddleware = require("./middlewares/global/userLoggedMiddleware")
 
 const app = express();
 
@@ -16,7 +16,8 @@ app.use(session({ //npm i express-session. Para bloquear a alguno usuarios que n
     secret: "Shh, It's a secret",
     resave: false,
     saveUninitialized: false,
-}))
+}));
+app.use(userLoggedMiddleware);//
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
 app.use(express.urlencoded({ extended: false })); // Para capturar el body
 app.use(express.json()); // Para capturar el body
