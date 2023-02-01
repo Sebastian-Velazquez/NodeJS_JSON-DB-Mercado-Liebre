@@ -17,6 +17,7 @@ router.post("/register/", upload.single("image"), validations, userController.pr
 //para ir a la pagina de login
 router.get("/login/", userController.loguearse);
 router.post("/login/", userController.processLoguearse);
-
+//para ir a la pagina de perfil de Usuario
+router.get("/profile/", userController.profile);
 
 module.exports = router;
