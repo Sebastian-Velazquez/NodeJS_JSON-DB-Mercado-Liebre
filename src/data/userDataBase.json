@@ -7,5 +7,14 @@
   "password": "$2a$10$hCapZxG6HG7DAfEBr2W8feO2ws0qRKfXPNNa1FzdAeSKzkGhTvpjO",
   "repeatPassword": "asd",
   "image": "image-1675207525018.jpeg"
+ },
+ {
+  "id": 2,
+  "firstName": "asd",
+  "lastName": "asd",
+  "email": "asd@asd.com",
+  "password": "$2a$10$ThNjHtzytUbXjrnPtskg1OagQt.IDcyiN5mIJfxiL.jHtgY9uHUw.",
+  "repeatPassword": "asd",
+  "image": "image-1675350616952.png"
  }
 ]

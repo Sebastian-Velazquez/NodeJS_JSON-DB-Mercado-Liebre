@@ -49,6 +49,7 @@ const controlador ={ //
     //-----------------------------PROCESSCREATE-------------------------------
         //Llenamos la pagina para crear un producto para vender y lo guadamos en la BD
     processCreate:(req, res)=>{
+        //validacion
         const resultValidation = validationResult(req);//validacion
         if (resultValidation.errors.length > 0){//resultValidation.errors es un objeto literal//mapped: pasa la variable resultValidation a literiario
             return res.render('product-create-form', {errors: resultValidation.mapped(), oldData: req.body }) //Para mostrar los datos bien ingresados
@@ -106,6 +107,23 @@ const controlador ={ //
     },
     //-----------------------------processEdit----------------------------------
     processEdit:(req, res)=>{
+        //validation
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0){
+           let id = req.params.id //esto es lo que nos llega por parametro
+            const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+           //Retorna el producto con el id mandado del req.params.id
+            let productFiltrado = products.find(producto=>{
+                return producto.id == id;
+            })
+           //Listo para mandar a .ejs//se pone el nombre del ejs entre ''.
+            return res.render('product-edit-form',{
+                producto:productFiltrado,
+                errors: resultValidation.mapped()
+            });
+        }
+
+
         //llamamos a todos lo datos
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 

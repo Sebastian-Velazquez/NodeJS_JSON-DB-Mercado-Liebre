@@ -13,6 +13,7 @@ router.get("/ofertas/", productController.oferta);// procesa pedido de get. Ahor
 //Middleware
 const upload = require("../middlewares/productRouter/multerMiddlewareProducts");
 const validations = require("../middlewares/productRouter/validationsMiddleware")
+const validationsEdit = require("../middlewares/productRouter/validationsMiddlewareProductEdit")
 const authMiddlewares = require("../middlewares/userRouter/authMiddlewares");//si no tengo a nadie en session
 
 //devolver o mandar un producto a detalle de producto
@@ -24,7 +25,7 @@ router.post("/create/", upload.single("image"),validations,productController.pro
 router.get("/list", productController.list);
 //Editar prducto get y put
 router.get("/edit/:id/",authMiddlewares, productController.edit);
-router.put("/edit/:id/", upload.single("image"), validations, productController.processEdit);//en el form se usa POST -- pero se usa ?_method=PUT en action
+router.put("/edit/:id/", upload.single("image"),validationsEdit, productController.processEdit);//en el form se usa POST -- pero se usa ?_method=PUT en action
 //Eliminar un prducto
 router.delete("/delete/:id/",authMiddlewares, productController.delete);
 

@@ -2,7 +2,7 @@
 //https://github.com/validatorjs/validator.js Para buscar
 const path = require("path");
 const {body} = require("express-validator");//para validar solo lo que nos pasa el body//Tambien en vez de body podemos usar check()
-
+//validacion para registrarse
 const validations =[
     body('firstName').notEmpty().withMessage('Tienes que escribir tu nombre'),  //firstName sale del name de ejs. notEmty es una validacion, valida si el campo esta vacio
     body('lastName').notEmpty().withMessage('Tienes que escribir tu apellido'),//withMessage: para cambiar el mesaje de error

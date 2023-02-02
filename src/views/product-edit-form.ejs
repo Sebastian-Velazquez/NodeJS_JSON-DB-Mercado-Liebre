@@ -29,15 +29,30 @@
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">
 						<label for="name" class="form-label">Nombre del producto:</label>
-						<input type="text" value="<%= producto.name %>" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
+						<input type="text" value="<%= producto.name %>" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input"
+						value="<%= locals.oldData ? oldData.name : null %>">
+						<!-- Validacion -->
+						<% if (locals.errors && errors.name){ %>
+							<p class="alertError"><%= errors.name.msg %> </p>
+							<% } %>
 					</div>
 					<div class="col-12 col-md-6">
 						<label for="price" class="form-label">Precio del producto:</label>
-						<input type="text" value="<%= producto.price %>" id="price" name="price" placeholder="Ej: 5678" class="form-input">
+						<input type="text" value="<%= producto.price %>" id="price" name="price" placeholder="Ej: 5678" class="form-input"
+						value="<%= locals.oldData ? oldData.price : null %>">
+						<!-- Validacion -->
+						<% if (locals.errors && errors.price){ %>
+							<p class="alertError"><%= errors.price.msg %> </p>
+							<% } %>
 					</div>
 					<div class="col-12 col-md-6">
 						<label for="discount" class="form-label">Descuento:</label>
-						<input type="text"  value="<%= producto.discount %>" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
+						<input type="text"  value="<%= producto.discount %>" id="discount" name="discount" placeholder="Ej: 15" class="form-input"
+						value="<%= locals.oldData ? oldData.discount : null %>">
+						<!-- Validacion -->
+						<!-- <% if (locals.errors && errors.discount){ %>
+							<p class="alertError"><%= errors.discount.msg %> </p>
+							<% } %> -->
 					</div>
 					<div class="col-12 col-md-6">
 						<label for="category" class="form-label">Categoría:</label>
@@ -54,6 +69,9 @@
 					<div class="col-12 col-md-6">
 						<label for="productImage" class="form-label">Imagen del producto:</label>
 						<input type="file" id="productImage" name="productImage">
+						<% if (locals.errors && errors.image){ %>
+							<p class="alertError"><%= errors.image.msg %> </p>
+						<% } %>
 					</div>
 					<div class="col-12">
 						<button type="submit" class="buy-now-button">Guardar producto</button>

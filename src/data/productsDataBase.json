@@ -2,9 +2,9 @@
  {
   "id": 1,
   "name": "Cafetera Moulinex Dolce Gusto Edited",
-  "price": 100,
-  "discount": 50,
-  "category": "visited",
+  "price": "100",
+  "discount": "",
+  "category": "",
   "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
   "image": "img-cafetera-moulinex.jpg"
  },
@@ -38,11 +38,11 @@
  {
   "id": 5,
   "name": "Nikon Reflex D3500 - Kit",
+  "price": "53000",
+  "discount": "20",
+  "category": "",
   "description": "Incluye la cámara D3500, el objetivo zoom AF-P DX NIKKOR 18-55mm y el superteleobjetivo zoom compacto AF-P DX NIKKOR 70-300mm. Ambos objetivos enfocan de forma rápida y silenciosa, lo que resulta ideal para grabar metraje de vídeo sin que se escuche apenas el ruido del accionamiento.",
-  "price": 53000,
-  "discount": 20,
-  "image": "img-camara-nikon.jpg",
-  "category": "in-sale"
+  "image": "img-camara-nikon.jpg"
  },
  {
   "id": 6,
@@ -64,21 +64,21 @@
  },
  {
   "id": 8,
-  "name": "Apple iPhone 11 Pro Dual SIM 256 GB",
+  "name": "",
+  "price": "148000",
+  "discount": "2",
+  "category": "",
   "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
-  "price": 148000,
-  "discount": 2,
-  "image": "img-iphone-11.jpg",
-  "category": "in-sale"
+  "image": "img-iphone-11.jpg"
  },
  {
   "id": 9,
   "name": "Teclado Apple Magic Inalámbrico",
+  "price": "11399",
+  "discount": "0",
+  "category": "",
   "description": "El teclado mágico combina un diseño elegante con una batería recargable incorporada y funciones clave mejoradas. Con un mecanismo de tijera estable debajo de cada tecla, así como un recorrido de teclas optimizado y un perfil bajo, el Teclado Mágico ofrece una experiencia de escritura notablemente cómoda y precisa.",
-  "price": 11399,
-  "discount": 0,
-  "image": "img-apple-magic-keyboard.jpg",
-  "category": "visited"
+  "image": "img-apple-magic-keyboard.jpg"
  },
  {
   "id": 10,
@@ -92,11 +92,11 @@
  {
   "id": 11,
   "name": "Parlante Inalámbrico Bose Soundtouch 10",
+  "price": "29990",
+  "discount": "12",
+  "category": "",
   "description": "Parlante Inalámbrico Bose Soundtouch 10. SoundTouch®.La manera más sencilla de reproducir música en todo su hogar de forma inalámbrica. Características. » Marca: Bose. » Modelo: SoundTouch. » Color: Negro",
-  "price": 29990,
-  "discount": 12,
-  "image": "img-parlante-bose.jpg",
-  "category": "visited"
+  "image": "img-parlante-bose.jpg"
  },
  {
   "id": 12,
@@ -128,11 +128,11 @@
  {
   "id": 15,
   "name": "Bicicleta Mountain Bike Fierce Rodado 29",
+  "price": "15979",
+  "discount": "12",
+  "category": "",
   "description": "Bicicleta Mountain Bike Fierce Rodado 29 21 velocidades. Tipo: Mountain Bike. Rodado: 29. Material Cuadro: Aluminio. Talle: 18. Suspensión: Delantera. Velocidades: 21 - Shimano. Sistema de Freno: Disco Mecánico. Llantas: Doble pared.",
-  "price": 15979,
-  "discount": 12,
-  "image": "img-bicicleta-fierce.jpg",
-  "category": "visited"
+  "image": "img-bicicleta-fierce.jpg"
  },
  {
   "id": 16,
