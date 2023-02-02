@@ -58,9 +58,9 @@ const controlador ={ //IMPORTANTE
                 //Guardar el user logeado
                 req.session.userLogged =  userToLogin
 
-                if (req.body.recordame){//Si esta tildado el input que viaja por el body, seteamos una cookie
-                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2})//userEmail se lo damos ostros, luego le asignamos el req y por ultimos el tiempo que va a dirar la cookie con maxAge
-                }
+                if(req.body.remember) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
+				}
 
                 return res.redirect('/user/profile')
             }
@@ -82,11 +82,13 @@ const controlador ={ //IMPORTANTE
         })
     },
     profile:function(req, res){
+        console.log(req.cookies.userEmail)
         return res.render('userProfile',{
             user: req.session.userLogged//le paso los datos del usuario logueado y ahora puedo imprimir datos a la vista ejs
         });
     },
-    logout:function(req,res){
+    logout:function(req,res){//cerrar  cuenta de usuario
+        res.clearCookie('userEmail');
         req.session.destroy();//para destruir la session, osea salir del login del perfil
         return res.redirect('/')
     }
