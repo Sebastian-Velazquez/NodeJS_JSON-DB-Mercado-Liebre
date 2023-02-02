@@ -13,20 +13,20 @@ router.get("/ofertas/", productController.oferta);// procesa pedido de get. Ahor
 //Middleware
 const upload = require("../middlewares/productRouter/multerMiddlewareProducts");
 const validations = require("../middlewares/productRouter/validationsMiddleware")
-
+const authMiddlewares = require("../middlewares/userRouter/authMiddlewares");//si no tengo a nadie en session
 
 //devolver o mandar un producto a detalle de producto
 router.get("/detail/:id", productController.detail);
 //Crear producto //upload.single("productImage")... productImage es el name del input tipo file//es para manejar multer y que solo revise ese pedido.. si queremos que lo tenga otro pedidom ponemos lo mismo
-router.get("/create/", productController.create);//muestra la vista o pagina
+router.get("/create/",authMiddlewares, productController.create);//muestra la vista o pagina
 router.post("/create/", upload.single("image"),validations,productController.processCreate);//se encarga de procesar los datos cuando se ejecuta el boton comi
 //manda toda la lista de productos Lista de producto sd asd
 router.get("/list", productController.list);
 //Editar prducto get y put
-router.get("/edit/:id/", productController.edit);
+router.get("/edit/:id/",authMiddlewares, productController.edit);
 router.put("/edit/:id/", upload.single("image"), validations, productController.processEdit);//en el form se usa POST -- pero se usa ?_method=PUT en action
 //Eliminar un prducto
-router.delete("/delete/:id/", productController.delete);
+router.delete("/delete/:id/",authMiddlewares, productController.delete);
 
 module.exports = router;
 

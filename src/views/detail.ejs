@@ -35,7 +35,7 @@
 				<div class="col-12 col-lg-4">
 					<article class="product-detail-info">
 						<h2 class="product-detail-title"><%= producto.name %></h2>
-						
+
 							<p class="product-detail-price small">
 								<span>$<%= producto.price %></span>
 								/
@@ -61,10 +61,11 @@
 
 						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
 						<hr>
-
-						<a href="/product/edit/<%= producto.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-						<form action="/product/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
+						<% if (locals.isLogged) { %> 
+							<a href="/product/edit/<%= producto.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+							<form action="/product/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+								<button type="submit" class="action-button delete">ELIMINAR</button>
+						<% } %> 
 						</form>
 					</article>
 				</div>

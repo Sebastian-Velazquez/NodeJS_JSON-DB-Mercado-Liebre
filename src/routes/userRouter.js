@@ -10,8 +10,8 @@ const userController = require("../controllers/userController.js");
 //Middleware
 const upload = require("../middlewares/userRouter/multerMiddlewaresUser");
 const validations = require("../middlewares/userRouter/validationMiddlewares");
-const guestMiddlewares = require("../middlewares/userRouter/guestMiddlewares");
-const authMiddlewares = require("../middlewares/userRouter/authMiddlewares");
+const guestMiddlewares = require("../middlewares/userRouter/guestMiddlewares");//si tengo alguein en session
+const authMiddlewares = require("../middlewares/userRouter/authMiddlewares");//si no tengo a nadie en session
 
 
 //para ir a la pagina de registro
