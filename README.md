@@ -2,7 +2,7 @@
 sebastian velazquez -  mercado liebre
 Proyecto Terminado.
 Como sugerencia tiene instalado:
-        npm install sequelize-cli -g
+        			npm install sequelize-cli -g
 
 				npm install sequelize
 
