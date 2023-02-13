@@ -62,7 +62,9 @@ const controlador ={ //IMPORTANTE
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
 				}
 
-                return res.redirect('/user/profile')
+                return res.render('profileUser',{
+                    user: req.session.userLogged//le paso los datos del usuario logueado y ahora puedo imprimir datos a la vista ejs
+                });
             }
 
             //si el password no es valido
@@ -83,9 +85,9 @@ const controlador ={ //IMPORTANTE
     },
     profile:function(req, res){
         //console.log(req.cookies.userEmail)
-        return res.render('userProfile',{
+        return res.render('profileUser',{
             user: req.session.userLogged//le paso los datos del usuario logueado y ahora puedo imprimir datos a la vista ejs
-        });
+        }); 
     },
     logout:function(req,res){//cerrar  cuenta de usuario
         res.clearCookie('userEmail');
