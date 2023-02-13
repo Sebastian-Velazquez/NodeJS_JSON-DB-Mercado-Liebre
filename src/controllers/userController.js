@@ -82,8 +82,8 @@ const controlador ={ //IMPORTANTE
         })
     },
     profile:function(req, res){
-        console.log(req.cookies.userEmail)
-        return res.render('profileUser',{
+        //console.log(req.cookies.userEmail)
+        return res.render('userProfile',{
             user: req.session.userLogged//le paso los datos del usuario logueado y ahora puedo imprimir datos a la vista ejs
         });
     },
