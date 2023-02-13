@@ -1,5 +1,5 @@
 const express = require('express');
-const session = require('express-session');//npm i express-session. Para tener link privados
+const session = require('express-session');//npm i express-session. Para tener link privados.. Tmabien se necesita cuando vas a loguearte
 const path = require('path');
 const methodOverride = require('method-override'); // GRUD Para poder usar los métodos PUT y DELETE
 const cookie = require('cookie-parser');//modulo para guardar datos del lado del servidor. cache
@@ -13,7 +13,7 @@ const morgan = require('morgan');
 app.use(morgan('dev'));//muestra infomacion adicional en la consela si se esta enviando informacion 
 
 // Middlewares
-app.use(session({ //npm i express-session. Para bloquear a alguno usuarios que no estan loguados
+app.use(session({ //npm i express-session. Para bloquear a alguno usuarios que no estan loguados // const session = require('express-session');
     secret: "Shh, It's a secret",
     resave: false,
     saveUninitialized: false,

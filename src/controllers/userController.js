@@ -55,8 +55,8 @@ const controlador ={ //IMPORTANTE
             //console.log(isOkThePassword)
             if(isOkThePassword){
                 delete userToLogin.password; // Borrra el password para que no quede guardado.
-                //Guardar el user logeado
-                req.session.userLogged =  userToLogin
+                //Guardar el user logeado// npm i express-session
+                req.session.userLogged =  userToLogin //session TENGO QUE TENER INSTALDO EL EXPRESS- SESSION..ESTAR LLAMADO EN APP.JS
 
                 if(req.body.remember) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
