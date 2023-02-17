@@ -62,9 +62,7 @@ const controlador ={ //IMPORTANTE
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
 				}
 
-                return res.render('profileUser',{
-                    user: req.session.userLogged//le paso los datos del usuario logueado y ahora puedo imprimir datos a la vista ejs
-                });
+                return res.redirect('/user/profile');//redirec se usa porque sino no te muestra el perfil, la foto y el salir en el header
             }
 
             //si el password no es valido
