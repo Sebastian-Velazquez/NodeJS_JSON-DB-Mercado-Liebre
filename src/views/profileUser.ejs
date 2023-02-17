@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+<!--     Pagina de icons -->
+<script src="https://kit.fontawesome.com/aef00d3210.js" crossorigin="anonymous"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     
     <link href="/css/userProfile.css" rel="stylesheet">
 </head>
 <body>
     
     <%- include('parcials/header.ejs') %>
-    <main >
-        <section class="fotoPerfil">
-            <div class="profileImage">
-                <img src="/img/avatar/<%= user.image %>">
-            </div>
-        </section> <br> <br>
-            <div>
+    <main>
+        <%- include('parcials/banner.ejs') %>
+        <div>
             <h1> Perfil de usuario </h1>
         </div>
-        <section class="datosUsuario">
-            <h2> <b>Datos de Usuario</b> </h2>
-            <h3> Nombre: <%= user.firstName %> </h3>
-            <h3> Correo Electrónico: <%= user.email %>  </h3>
-            <h3> Fecha De Nacimiento: 10/10/1010 </h3>
-            
-        </section>
+        <div class="container">
+            <section class="fotoPerfil">
+                <div class="profileImage">
+                    <img src="/img/avatar/<%= user.image %>">
+                </div>
+            </section> 
+                <section class="datosUsuario">
+                    <h2> <b>Datos de Usuario</b> </h2>
+                    <h3> Nombre: <%= user.firstName %> </h3>
+                    <h3> Correo Electrónico: <%= user.email %>  </h3>
+                    <h3> Fecha De Nacimiento: 10/10/1010 </h3>
+                </section>
+        </div>
     </main>
     <%- include('parcials/footer.ejs') %>
 </body>
