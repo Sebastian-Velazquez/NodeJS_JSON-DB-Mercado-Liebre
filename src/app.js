@@ -45,7 +45,7 @@ app.use("/user", userRouter);
 app.use("/product", productRouter);
 
 //Es para escuchar el servido  hacerlo que ande  en Tander
-const port = process.env.PORT || 5518;
+const port = process.env.PORT || 5500;
 app.listen(port,()=> console.log(`Servidor corriendo en http://localhost:${port}`));
 
 
