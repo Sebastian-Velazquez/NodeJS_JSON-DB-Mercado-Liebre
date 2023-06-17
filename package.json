@@ -4,7 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "pm2 start src/app.js --name mercado-liebre",
+    "stop": "pm2 stop src/app.js",
+    "restart": "pm2 restart src/app.js",
+    "start2": "node src/app.js",
     "test": "nodemon src/app.js"
   },
   "repository": {
